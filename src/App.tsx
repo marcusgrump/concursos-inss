@@ -12,6 +12,7 @@ const QuestoesPage = lazy(() => import("@/pages/questoes").then((m) => ({ defaul
 const SimuladoPage = lazy(() => import("@/pages/simulado").then((m) => ({ default: m.SimuladoPage })))
 const FlashcardsPage = lazy(() => import("@/pages/flashcards").then((m) => ({ default: m.FlashcardsPage })))
 const RevisaoPage = lazy(() => import("@/pages/revisao").then((m) => ({ default: m.RevisaoPage })))
+const MateriaisPage = lazy(() => import("@/pages/materiais").then((m) => ({ default: m.MateriaisPage })))
 const ProgressoPage = lazy(() => import("@/pages/progresso").then((m) => ({ default: m.ProgressoPage })))
 
 function RolarAoTopo() {
@@ -35,6 +36,7 @@ export default function App() {
               <Route path="simulado" element={<SimuladoPage />} />
               <Route path="flashcards" element={<FlashcardsPage />} />
               <Route path="revisao" element={<RevisaoPage />} />
+              <Route path="materiais" element={<MateriaisPage />} />
               <Route path="progresso" element={<ProgressoPage />} />
               <Route path="*" element={<PainelPage />} />
             </Route>

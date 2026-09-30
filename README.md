@@ -12,6 +12,8 @@ Aplicativo de estudos para os cargos de **Técnico** e **Analista do Seguro Soci
 - **Simulado cronometrado** com correção Cebraspe (um item errado anula um certo) e notas de corte do edital.
 - **Flashcards** com repetição espaçada (sistema Leitner).
 - **Caderno de erros** para revisar o que foi errado.
+- **Leis e provas anteriores**: links para a legislação oficial (Planalto/DOU) com prioridade de estudo e provas oficiais do Cebraspe (INSS 2022 e 2016) com gabaritos definitivos (ficam em `public/provas/`).
+- **Recomendações de estudo** no painel e sugestão da próxima disciplina.
 - **Modo escuro**.
 - **Progresso salvo no navegador** (`localStorage`), com exportação e importação de backup em JSON.
 - **Página imprimível** (salvar como PDF) do conteúdo programático.
@@ -49,13 +51,14 @@ URL esperada: <https://marcusgrump.github.io/concursos-inss/>
 
 ```
 src/
-  data/         edital.ts, questoes/ (questões por tema), flashcards.ts
+  data/         edital.ts, questoes/ (questões por tema), flashcards.ts, materiais.ts
   pages/        páginas do app (rotas)
   components/   componentes da interface (ui/ = shadcn)
   lib/          utilitários e funções auxiliares
   assets/fonts/ fontes Geist (woff2) e licença OFL
 public/
   editais/      PDFs oficiais dos editais
+  provas/       provas e gabaritos oficiais do Cebraspe
 ```
 
 ## Aviso
