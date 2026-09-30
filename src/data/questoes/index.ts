@@ -6,6 +6,7 @@ import { QUESTOES_BENEFICIOS } from "./beneficios"
 import { QUESTOES_CONSTITUCIONAL_ETICA } from "./constitucional-etica"
 import { QUESTOES_GERAIS } from "./gerais"
 import { QUESTOES_SEGURIDADE } from "./seguridade"
+import { QUESTOES_SERVICO_SOCIAL } from "./servico-social"
 
 export const QUESTOES: Questao[] = [
   ...QUESTOES_GERAIS,
@@ -14,6 +15,7 @@ export const QUESTOES: Questao[] = [
   ...QUESTOES_SEGURIDADE,
   ...QUESTOES_BENEFICIOS,
   ...QUESTOES_ASSISTENCIA,
+  ...QUESTOES_SERVICO_SOCIAL,
 ]
 
 export const QUESTOES_POR_ID = new Map(QUESTOES.map((q) => [q.id, q]))
