@@ -1,0 +1,357 @@
+import type { Cargo, CargoId, Topico } from "./types"
+
+/** Gera tópicos com ids estáveis (prefixo + índice) a partir da lista do edital. */
+function t(prefixo: string, itens: string[]): Topico[] {
+  return itens.map((texto, i) => ({ id: `${prefixo}-${i + 1}`, texto }))
+}
+
+/**
+ * Transcrição dos objetos de avaliação dos últimos editais oficiais do INSS,
+ * ambos executados pelo Cebraspe:
+ *  - Técnico do Seguro Social: Edital nº 1 – INSS, de 12/9/2022
+ *  - Analista do Seguro Social (formação em Serviço Social): Edital nº 1 – INSS, de 22/12/2015
+ */
+export const CARGOS: Record<CargoId, Cargo> = {
+  tecnico: {
+    id: "tecnico",
+    nome: "Técnico do Seguro Social",
+    nivel: "Nível médio",
+    editalReferencia: "Edital nº 1 – INSS, de 12 de setembro de 2022 (Cebraspe)",
+    requisito:
+      "Certificado de conclusão de ensino médio ou curso técnico equivalente, reconhecido pelo MEC, até a data da posse.",
+    remuneracaoReferencia:
+      "Até R$ 5.905,79 em 2022 (vencimento básico + GAE + GDASS + auxílio-alimentação). Os valores serão atualizados no próximo edital.",
+    atribuicoes:
+      "Atender ao público; realizar atividades de reconhecimento de direitos previdenciários e assistenciais (Lei nº 8.742/1993); instruir e movimentar processos; controlar dados e atualizar sistemas; orientar e conscientizar sobre direitos previdenciários, entre outras.",
+    prova: {
+      duracao: "3 horas e 30 minutos",
+      itensP1: 50,
+      itensP2: 70,
+      minimoP1: 10,
+      minimoP2: 21,
+      minimoTotal: 36,
+    },
+    pdf: {
+      titulo: "Edital nº 1 – INSS/2022 (Técnico do Seguro Social)",
+      arquivo: "editais/inss-2022-tecnico-edital-1.pdf",
+      fonteOficial: "https://cdn.cebraspe.org.br/concursos/inss_22/arquivos/ED_1_INSS_22_ABERTURA.PDF",
+    },
+    disciplinas: [
+      {
+        id: "tec-portugues",
+        nome: "Língua Portuguesa",
+        bloco: "basicos",
+        pools: ["portugues"],
+        topicos: t("tec-pt", [
+          "Compreensão e interpretação de textos",
+          "Tipologia textual",
+          "Ortografia oficial",
+          "Acentuação gráfica",
+          "Emprego das classes de palavras",
+          "Emprego do sinal indicativo de crase",
+          "Sintaxe da oração e do período",
+          "Pontuação",
+          "Concordância nominal e verbal",
+          "Regências nominal e verbal",
+          "Significação das palavras",
+          "Redação de correspondências oficiais (Manual de Redação da Presidência da República)",
+        ]),
+      },
+      {
+        id: "tec-etica",
+        nome: "Ética no Serviço Público",
+        bloco: "basicos",
+        pools: ["etica"],
+        topicos: t("tec-et", [
+          "Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Decreto nº 1.171/1994)",
+          "Sistema de Gestão da Ética do Poder Executivo Federal (Decreto nº 6.029/2007 e alterações)",
+        ]),
+      },
+      {
+        id: "tec-constitucional",
+        nome: "Noções de Direito Constitucional",
+        bloco: "basicos",
+        pools: ["constitucional"],
+        topicos: t("tec-dc", [
+          "Direitos e deveres individuais e coletivos (vida, liberdade, igualdade, segurança e propriedade)",
+          "Direitos sociais",
+          "Nacionalidade",
+          "Cidadania",
+          "Garantias constitucionais individuais",
+          "Garantias dos direitos coletivos, sociais e políticos",
+          "Administração pública (arts. 37 a 41 da CF/1988)",
+        ]),
+      },
+      {
+        id: "tec-administrativo",
+        nome: "Noções de Direito Administrativo",
+        bloco: "basicos",
+        pools: ["administrativo"],
+        topicos: t("tec-da", [
+          "Estado, governo e administração pública: conceitos, elementos, poderes, organização, natureza, fins e princípios",
+          "Direito administrativo: conceito, fontes e princípios",
+          "Organização administrativa da União; administração direta e indireta",
+          "Agentes públicos; cargo, emprego e função; Regime Jurídico Único (Lei nº 8.112/1990): provimento, vacância, remoção, redistribuição, substituição, direitos e vantagens, regime disciplinar, responsabilidades",
+          "Poderes administrativos: hierárquico, disciplinar, regulamentar, de polícia; uso e abuso do poder",
+          "Ato administrativo: validade, eficácia, atributos, extinção, classificação, espécies, vinculação e discricionariedade",
+          "Serviços públicos: conceito, classificação, regulamentação, controle; concessão, permissão, autorização",
+          "Controle e responsabilização da administração; responsabilidade civil do Estado; Lei nº 8.429/1992 (improbidade)",
+          "Lei nº 9.784/1999 (processo administrativo federal)",
+        ]),
+      },
+      {
+        id: "tec-informatica",
+        nome: "Noções de Informática",
+        bloco: "basicos",
+        pools: ["informatica"],
+        topicos: t("tec-inf", [
+          "Conceitos de Internet e intranet",
+          "Conceitos básicos e modos de utilização de tecnologias, ferramentas, aplicativos e procedimentos de informática",
+          "Edição de textos, planilhas e apresentações (LibreOffice)",
+          "Sistemas operacionais Windows 7 e 10",
+          "Ferramentas de navegação e correio eletrônico",
+          "Segurança e proteção: vírus, worms e derivados",
+        ]),
+      },
+      {
+        id: "tec-rlm",
+        nome: "Raciocínio Lógico-Matemático",
+        bloco: "basicos",
+        pools: ["rlm"],
+        topicos: t("tec-rlm", [
+          "Proposições, valores lógicos, sentenças abertas, conectivos, proposições simples e compostas, número de linhas da tabela-verdade",
+          "Tautologia",
+          "Operações com conjuntos",
+          "Cálculos com porcentagens",
+        ]),
+      },
+      {
+        id: "tec-especificos",
+        nome: "Seguridade Social e Legislação Previdenciária",
+        bloco: "especificos",
+        pools: ["seguridade", "beneficios", "loas"],
+        topicos: t("tec-esp", [
+          "Seguridade Social: origem e evolução legislativa no Brasil; conceituação; organização e princípios constitucionais",
+          "Legislação previdenciária: conteúdo, fontes, autonomia; aplicação, vigência, hierarquia, interpretação e integração",
+          "RGPS: segurados obrigatórios; filiação e inscrição; empregado, doméstico, contribuinte individual, avulso e segurado especial",
+          "Segurado facultativo; trabalhadores excluídos do RGPS",
+          "Empresa e empregador doméstico: conceito previdenciário",
+          "Financiamento da Seguridade Social: receitas da União e contribuições sociais (segurados, empresas, empregador doméstico, produtor rural, clube de futebol, concursos de prognósticos)",
+          "Salário de contribuição: conceito, parcelas integrantes e não integrantes, limites, complementação, reajustamento",
+          "Arrecadação e recolhimento: competência do INSS e da Receita Federal, obrigações, prazos, juros, multa e atualização",
+          "Decadência e prescrição",
+          "Crimes contra a seguridade social",
+          "Recurso das decisões administrativas",
+          "Plano de Benefícios: beneficiários, prestações, carência, salário de benefício, renda mensal, reajustamento",
+          "Manutenção, perda e restabelecimento da qualidade de segurado",
+          "Serviços previdenciários: serviço social e reabilitação profissional",
+          "Benefícios de legislações especiais (Talidomida, seringueiros, ex-combatente, hemodiálise de Caruaru, Césio 137, anistiado político, hanseníase, Zika vírus)",
+          "Seguro-desemprego do pescador artesanal – seguro-defeso (Lei nº 10.779/2003; Decreto nº 8.424/2015)",
+          "LOAS: BPC, auxílio-inclusão, Lei nº 8.742/1993, Lei nº 14.176/2021, Decreto nº 6.214/2007",
+          "RPPS: certidão de tempo de contribuição, contagem recíproca, compensação previdenciária (Lei nº 9.796/1999; Decreto nº 10.188/2019)",
+          "Emenda Constitucional nº 103/2019 (Reforma da Previdência)",
+          "Lei Complementar nº 142/2013 (aposentadoria da pessoa com deficiência)",
+          "Lei nº 8.212/1991 (custeio)",
+          "Lei nº 8.213/1991 (benefícios)",
+          "Decreto nº 3.048/1999 (Regulamento da Previdência Social)",
+          "Instrução Normativa PRES/INSS nº 128/2022",
+          "O servidor público como agente de desenvolvimento social; saúde e qualidade de vida no serviço público",
+        ]),
+      },
+    ],
+  },
+  analista: {
+    id: "analista",
+    nome: "Analista do Seguro Social",
+    nivel: "Nível superior",
+    editalReferencia: "Edital nº 1 – INSS, de 22 de dezembro de 2015 (Cebraspe) — formação em Serviço Social",
+    requisito:
+      "Diploma de graduação em Serviço Social reconhecido pelo MEC e registro no conselho de classe (no edital de 2015). O próximo edital poderá trazer outras formações.",
+    remuneracaoReferencia:
+      "Até R$ 7.496,09 em 2015/2016 (vencimento básico + GAE + GDASS). Valores defasados: serão atualizados no próximo edital.",
+    atribuicoes:
+      "Atender e acompanhar usuários nas Agências da Previdência Social; planejar e executar programas de Serviço Social e Reabilitação Profissional; realizar avaliação social para concessão de benefícios (BPC e aposentadoria da pessoa com deficiência); emitir parecer social, além das atividades comuns ao Técnico.",
+    prova: {
+      duracao: "3 horas e 30 minutos",
+      itensP1: 50,
+      itensP2: 70,
+      minimoP1: 10,
+      minimoP2: 21,
+      minimoTotal: 36,
+    },
+    pdf: {
+      titulo: "Edital nº 1 – INSS/2015 (Analista e Técnico do Seguro Social)",
+      arquivo: "editais/inss-2015-analista-tecnico-edital-1.pdf",
+      fonteOficial: "https://cdn.cebraspe.org.br/concursos/INSS_2015/arquivos/INSS_ED._1_ABT.PDF",
+    },
+    observacao:
+      "O último edital de Analista é de 2015 e cobrava apenas a formação em Serviço Social. Use este conteúdo como base e acompanhe o novo edital para eventuais novas especialidades.",
+    disciplinas: [
+      {
+        id: "ana-portugues",
+        nome: "Língua Portuguesa",
+        bloco: "basicos",
+        pools: ["portugues"],
+        topicos: t("ana-pt", [
+          "Compreensão e interpretação de textos",
+          "Tipologia textual",
+          "Ortografia oficial",
+          "Acentuação gráfica",
+          "Classes de palavras; formação de palavras; flexão de gênero e número; modos e tempos verbais",
+          "Emprego do sinal indicativo de crase",
+          "Sintaxe da oração e do período; termos da oração; concordância nominal e verbal",
+          "Pontuação",
+          "Figuras de linguagem",
+          "Significação das palavras",
+          "Redação de correspondências oficiais (Manual de Redação da Presidência da República)",
+        ]),
+      },
+      {
+        id: "ana-rlm",
+        nome: "Raciocínio Lógico",
+        bloco: "basicos",
+        pools: ["rlm"],
+        topicos: t("ana-rlm", [
+          "Estruturas lógicas e lógica de argumentação",
+          "Diagramas lógicos",
+          "Tautologias e proposições",
+          "Teoria dos conjuntos",
+          "Análise combinatória",
+          "Noções de estatística e probabilidade",
+        ]),
+      },
+      {
+        id: "ana-informatica",
+        nome: "Noções de Informática",
+        bloco: "basicos",
+        pools: ["informatica"],
+        topicos: t("ana-inf", [
+          "Conceitos de Internet e intranet",
+          "Tecnologias, ferramentas, aplicativos e procedimentos de informática",
+          "Edição de textos, planilhas e apresentações (LibreOffice)",
+          "Sistemas operacionais Windows 7 e 10",
+          "Navegação e correio eletrônico",
+          "Segurança e proteção: vírus, worms e derivados",
+        ]),
+      },
+      {
+        id: "ana-constitucional",
+        nome: "Direito Constitucional",
+        bloco: "basicos",
+        pools: ["constitucional"],
+        topicos: t("ana-dc", [
+          "Princípios fundamentais",
+          "Direitos e garantias fundamentais: individuais e coletivos, sociais, nacionalidade, direitos políticos, partidos políticos",
+          "Organização do Estado: político-administrativa, União, Estados, Municípios, DF e Territórios",
+          "Administração pública e servidores públicos",
+          "Ordem social: seguridade social (saúde, previdência e assistência), educação, família, criança, adolescente, idoso e índios",
+        ]),
+      },
+      {
+        id: "ana-administrativo",
+        nome: "Direito Administrativo (inclui Ética e Lei nº 8.112/1990)",
+        bloco: "basicos",
+        pools: ["administrativo", "etica"],
+        topicos: t("ana-da", [
+          "Administração pública como função do Estado; princípios explícitos e implícitos; reforma do Estado",
+          "Administração direta e indireta: autarquias, fundações, empresas públicas e sociedades de economia mista",
+          "Poder regulamentar; regulamentos de execução e autônomos; regulação",
+          "Ato administrativo: conceito, elementos, vícios, classificações; procedimento administrativo; contratos, consórcios e convênios",
+          "Licitações: conceito e modalidades",
+          "Código de Ética (Decreto nº 1.171/1994 e Decreto nº 6.029/2007): regras deontológicas, deveres, vedações, comissões de ética",
+          "Regime Jurídico Único (Lei nº 8.112/1990): provimento, vacância, direitos e vantagens, regime disciplinar, PAD, seguridade do servidor",
+          "Contratação temporária de excepcional interesse público",
+        ]),
+      },
+      {
+        id: "ana-previdenciaria",
+        nome: "Legislação Previdenciária",
+        bloco: "basicos",
+        pools: ["seguridade", "beneficios"],
+        topicos: t("ana-prev", [
+          "Finalidade e princípios básicos da Previdência Social",
+          "RGPS: segurados obrigatórios, filiação e inscrição, espécies de segurados",
+          "Segurado facultativo; trabalhadores excluídos do RGPS",
+          "Empresa e empregador doméstico: conceito previdenciário",
+          "Financiamento da Seguridade Social e salário de contribuição; competência do INSS e da Receita Federal",
+          "Parcelamento, restituição e compensação de contribuições",
+          "Infrações à legislação previdenciária",
+          "Recurso das decisões administrativas",
+          "Plano de Benefícios: beneficiários, prestações, serviço social, reabilitação profissional, justificação administrativa, carência, salário de benefício, renda mensal",
+          "Manutenção, perda e restabelecimento da qualidade de segurado",
+          "Leis nº 8.212/1991 e nº 8.213/1991; Decreto nº 3.048/1999",
+          "Plano Simplificado de Previdência Social",
+        ]),
+      },
+      {
+        id: "ana-assistencia",
+        nome: "Legislação da Assistência Social, Saúde do Trabalhador e Pessoa com Deficiência",
+        bloco: "basicos",
+        pools: ["loas", "politicas-sociais"],
+        topicos: t("ana-as", [
+          "LOAS (Lei nº 8.742/1993): definições, objetivos, princípios, diretrizes, organização, benefícios, financiamento",
+          "Política Nacional de Assistência Social (PNAS/2004) e SUAS",
+          "NOB/SUAS/2012",
+          "BPC (Decreto nº 6.214/2007): habilitação, concessão, manutenção, suspensão e cessação",
+          "Estatuto da Pessoa Idosa (Lei nº 10.741/2003)",
+          "Estatuto da Criança e do Adolescente (Lei nº 8.069/1990)",
+          "Aposentadoria da pessoa com deficiência (LC nº 142/2013)",
+          "Convenção da ONU sobre os Direitos das Pessoas com Deficiência",
+          "Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF/OMS)",
+          "Política Nacional de Saúde do Trabalhador e da Trabalhadora",
+          "Lei Brasileira de Inclusão (Lei nº 13.146/2015)",
+        ]),
+      },
+      {
+        id: "ana-servico-social",
+        nome: "Serviço Social (Conhecimentos Específicos)",
+        bloco: "especificos",
+        pools: ["servico-social", "politicas-sociais"],
+        topicos: t("ana-ss", [
+          "Serviço Social como profissão: gênese, institucionalização no mundo e no Brasil, significado social",
+          "Movimento de reconceituação e renovação profissional (modernizadora, reatualização do conservadorismo, intenção de ruptura)",
+          "Questão social e suas manifestações; movimentos sociais; mudanças no mundo do trabalho",
+          "Regulamentação da profissão (Lei nº 8.662/1993)",
+          "Dimensão técnico-operativa: planejamento, instrumentos e técnicas (entrevista, grupos, visitas, redes, famílias)",
+          "Pareceres e laudos conjuntos (Resolução CFESS nº 557/2009)",
+          "Serviço Social na Previdência: trajetória, arts. 88 e 89 da Lei nº 8.213/1991, parecer social, avaliação social do BPC e da aposentadoria da PcD",
+          "Dimensão ético-política: Código de Ética (Resolução CFESS nº 273/1993) e projeto ético-político",
+          "Estado, políticas públicas e direitos sociais; Estado de bem-estar; cidadania regulada",
+          "Participação social: conselhos e conferências; políticas da seguridade social, educação, trabalho e emprego",
+          "Lei Maria da Penha (Lei nº 11.340/2006)",
+          "CF/1988: princípios fundamentais, direitos e garantias, ordem social",
+          "Realidade social brasileira: desigualdade, pobreza, questão urbana e rural, dinâmica demográfica",
+        ]),
+      },
+    ],
+  },
+}
+
+export const LISTA_CARGOS = [CARGOS.tecnico, CARGOS.analista]
+
+export const NOMES_POOLS: Record<string, string> = {
+  portugues: "Língua Portuguesa",
+  etica: "Ética no Serviço Público",
+  constitucional: "Direito Constitucional",
+  administrativo: "Direito Administrativo",
+  informatica: "Informática",
+  rlm: "Raciocínio Lógico",
+  seguridade: "Seguridade Social e Custeio",
+  beneficios: "Benefícios do RGPS",
+  loas: "LOAS, BPC e Benefícios Especiais",
+  "politicas-sociais": "Políticas Sociais e Direitos",
+  "servico-social": "Serviço Social",
+}
+
+/** Situação do concurso na data de atualização do app. */
+export const SITUACAO = {
+  atualizadoEm: "30/09/2026",
+  resumo:
+    "Ainda não há edital publicado. O INSS formalizou ao MGI pedido de autorização para 10 mil vagas (8.501 para Técnico e 1.499 para Analista), aguardando aprovação. A banca não foi definida — o Cebraspe organizou os dois últimos concursos (2015/2016 e 2022).",
+  pontos: [
+    "Pedido registrado em 15/05/2026: 10.000 vagas (8.501 Técnico / 1.499 Analista).",
+    "Autorização do MGI: pendente.",
+    "Banca: não definida (Cebraspe organizou os concursos de 2015/16 e 2022).",
+    "Este app usa os conteúdos oficiais dos editais de 2022 (Técnico) e 2015 (Analista) como base de estudo.",
+  ],
+}
