@@ -30,7 +30,7 @@ export const QUESTOES_GERAIS: Questao[] = [
       "No trecho “Cabe, pois, ao poder público”, a palavra “pois” introduz uma explicação para o que foi dito antes, equivalendo a “porque”.",
     gabarito: "E",
     comentario:
-      "Posposto ao verbo e isolado por vírgulas, “pois” tem valor conclusivo, equivalente a “portanto”. Com valor explicativo (“porque”), ele aparece anteposto ao verbo e sem a pausa das vírgulas.",
+      "Posposto ao verbo e isolado por vírgulas, “pois” tem valor conclusivo, equivalente a “portanto”, e pode ser substituído por essa conjunção sem prejuízo do sentido. Com valor explicativo (“porque”), “pois” inicia a oração que introduz (“Saia cedo, pois o trânsito está lento”), em vez de vir intercalado após o verbo.",
   },
   {
     id: "pt-003",
@@ -178,7 +178,7 @@ export const QUESTOES_GERAIS: Questao[] = [
     pool: "portugues",
     assunto: "Pontuação: orações adjetivas",
     enunciado:
-      "Em “Os servidores, que concluíram o curso, receberam certificado”, a oração destacada é explicativa e indica que todos os servidores concluíram o curso; sem as vírgulas, a oração seria restritiva e limitaria o grupo aos que o concluíram.",
+      "Em “Os servidores, que concluíram o curso, receberam certificado”, a oração “que concluíram o curso” é explicativa e indica que todos os servidores concluíram o curso; sem as vírgulas, a oração seria restritiva e limitaria o grupo aos que o concluíram.",
     gabarito: "C",
     comentario:
       "A oração adjetiva explicativa vem entre vírgulas e se aplica a todo o grupo. A restritiva não tem vírgulas e restringe o sentido do antecedente, selecionando apenas parte dele.",
@@ -191,7 +191,7 @@ export const QUESTOES_GERAIS: Questao[] = [
       "Com o Novo Acordo Ortográfico, deixaram de ser acentuadas as palavras paroxítonas com ditongo aberto “ei” ou “oi”, como “ideia” e “heroico”.",
     gabarito: "C",
     comentario:
-      "A regra vale apenas para paroxítonas (ideia, assembleia, jiboia, heroico). Permanecem acentuados os ditongos abertos em palavras oxítonas ou monossílabas, como “herói” e “papéis”.",
+      "A regra vale apenas para paroxítonas (ideia, assembleia, jiboia, heroico). Permanecem acentuados os ditongos abertos em palavras oxítonas ou monossílabas tônicas, como “herói”, “papéis” e “dói”, e as paroxítonas que se acentuam por outra regra, como “destróier” (terminada em -r).",
   },
   {
     id: "pt-019",
@@ -200,7 +200,7 @@ export const QUESTOES_GERAIS: Questao[] = [
     enunciado: "Com o Novo Acordo Ortográfico, o trema foi mantido em palavras como “freqüência” e “lingüiça”.",
     gabarito: "E",
     comentario:
-      "O trema foi abolido em palavras portuguesas: grafa-se “frequência” e “linguiça”. Ele só permanece em palavras estrangeiras e derivadas, como “mülleriano”.",
+      "O trema foi abolido em palavras portuguesas: grafa-se “frequência” e “linguiça”. Ele só permanece em nomes próprios estrangeiros e em seus derivados, como “Müller” e “mülleriano”.",
   },
   {
     id: "pt-020",
@@ -595,7 +595,7 @@ export const QUESTOES_GERAIS: Questao[] = [
       "A negação da proposição “Se chover, então o atendimento será suspenso” é “Se não chover, então o atendimento não será suspenso”.",
     gabarito: "E",
     comentario:
-      "A negação de p → q é p ∧ ~q, ou seja, “Choveu e o atendimento não foi suspenso”. A frase da assertiva é a inversa negada, que não é a negação da condicional.",
+      "A negação de p → q é p ∧ ~q, ou seja, “Chove e o atendimento não será suspenso”. A frase da assertiva corresponde a ~p → ~q (a contrária ou inversa da condicional), que não é sua negação nem lhe é equivalente.",
   },
   {
     id: "rlm-008",
@@ -614,7 +614,7 @@ export const QUESTOES_GERAIS: Questao[] = [
       "A proposição “Se p, então q” é logicamente equivalente à proposição “Se q, então p”.",
     gabarito: "E",
     comentario:
-      "“Se q, então p” é a recíproca (ou inversa) de p → q e não é equivalente a ela. As equivalências da condicional são a contrapositiva (~q → ~p) e ~p ∨ q.",
+      "“Se q, então p” é a recíproca (ou conversa) de p → q e não é equivalente a ela: com p falsa e q verdadeira, p → q é V, mas q → p é F. As equivalências da condicional são a contrapositiva (~q → ~p) e ~p ∨ q.",
   },
   {
     id: "rlm-010",
@@ -652,7 +652,7 @@ export const QUESTOES_GERAIS: Questao[] = [
       "Em um grupo de 60 segurados atendidos, 35 apresentaram o RG, 40 apresentaram o CPF e 15 apresentaram os dois documentos. Nesse caso, 5 segurados não apresentaram nenhum dos dois documentos.",
     gabarito: "E",
     comentario:
-      "n(RG ∪ CPF) = 35 + 40 − 15 = 60. Como o grupo tem 60 segurados, nenhum deles ficou fora da união, isto é, 0 segurado não apresentou documento algum.",
+      "n(RG ∪ CPF) = 35 + 40 − 15 = 60. Como o grupo tem 60 segurados, nenhum deles ficou fora da união, isto é, todos apresentaram ao menos um dos documentos, e não 5 como afirma a assertiva.",
   },
   {
     id: "rlm-014",

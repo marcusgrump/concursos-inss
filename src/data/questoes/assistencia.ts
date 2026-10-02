@@ -18,11 +18,11 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     pool: "loas",
     assunto: "BPC — renda",
     enunciado:
-      "Pela LOAS, considera-se incapaz de prover a manutenção da pessoa com deficiência ou idosa a família cuja renda mensal per capita seja igual ou inferior a 1/2 salário mínimo.",
+      "Pela LOAS, como regra geral, tem direito ao BPC, observados os demais requisitos, a pessoa com deficiência ou idosa cuja renda familiar mensal per capita seja igual ou inferior a 1/2 salário mínimo.",
     gabarito: "E",
     comentario:
-      "O critério legal é renda per capita igual ou inferior a 1/4 do salário mínimo (art. 20, § 3º). O regulamento PODE ampliar esse limite para até 1/2 salário mínimo considerando outros fatores (art. 20-B), mas a regra geral é 1/4.",
-    fundamento: "Lei nº 8.742/1993, art. 20, § 3º",
+      "O critério legal é renda familiar mensal per capita igual ou inferior a 1/4 do salário mínimo (art. 20, § 3º, com redação da Lei nº 14.176/2021). O regulamento PODE ampliar esse limite para até 1/2 salário mínimo (art. 20, § 11-A), considerando grau da deficiência, dependência de terceiros e gastos com saúde (art. 20-B), mas a regra geral é 1/4.",
+    fundamento: "Lei nº 8.742/1993, art. 20, §§ 3º e 11-A, e art. 20-B",
   },
   {
     id: "loas-003",
@@ -51,7 +51,8 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "Para fins do BPC, considera-se impedimento de longo prazo aquele que produza efeitos pelo prazo mínimo de dois anos.",
     gabarito: "C",
-    comentario: "Art. 20, § 10, da LOAS.",
+    comentario:
+      "Correto. O art. 20, § 10, da LOAS define como de longo prazo o impedimento que produza efeitos por, no mínimo, 2 anos. Esse impedimento, em interação com barreiras, é o que caracteriza a pessoa com deficiência para fins do BPC (§ 2º).",
     fundamento: "Lei nº 8.742/1993, art. 20, § 10",
   },
   {
@@ -72,7 +73,8 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "O BPC ou o benefício previdenciário de até um salário mínimo concedido a idoso acima de 65 anos ou a pessoa com deficiência não será computado no cálculo da renda familiar per capita para a concessão do BPC a outro idoso ou pessoa com deficiência da mesma família.",
     gabarito: "C",
-    comentario: "Art. 20, § 14, da LOAS (Lei nº 13.982/2020).",
+    comentario:
+      "Correto. O art. 20, § 14, da LOAS (incluído pela Lei nº 13.982/2020) exclui do cálculo da renda familiar o BPC ou o benefício previdenciário de até um salário mínimo pago a idoso acima de 65 anos ou a pessoa com deficiência, o que permite que mais de um membro da mesma família receba o BPC (§ 15).",
     fundamento: "Lei nº 8.742/1993, art. 20, § 14",
   },
   {
@@ -80,10 +82,11 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     pool: "loas",
     assunto: "BPC — acumulação",
     enunciado:
-      "O BPC não pode ser acumulado com qualquer outro benefício da seguridade social ou de outro regime, salvo os da assistência médica e da pensão especial de natureza indenizatória.",
+      "Em regra, o BPC não pode ser acumulado com qualquer outro benefício da seguridade social ou de outro regime, mas a LOAS ressalva, entre outras hipóteses, os benefícios da assistência médica e a pensão especial de natureza indenizatória.",
     gabarito: "C",
-    comentario: "Art. 20, § 4º, da LOAS. A remuneração de contrato de aprendizagem também não impede o BPC (limitada a 2 anos, § 9º).",
-    fundamento: "Lei nº 8.742/1993, art. 20, § 4º",
+    comentario:
+      "Correto. O art. 20, § 4º, da LOAS veda a acumulação, salvo com assistência médica, pensão especial de natureza indenizatória e, desde a Lei nº 14.601/2023, as transferências de renda do programa de renda básica (como o Bolsa Família). Além disso, a contratação da pessoa com deficiência como aprendiz não suspende o BPC, limitado a 2 anos o recebimento concomitante da remuneração e do benefício (art. 21-A, § 2º).",
+    fundamento: "Lei nº 8.742/1993, art. 20, § 4º, e art. 21-A, § 2º",
   },
   {
     id: "loas-009",
@@ -113,7 +116,8 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "Para o cálculo da renda per capita do BPC, a família é composta pelo requerente, o cônjuge ou companheiro, os pais e, na ausência de um deles, a madrasta ou o padrasto, os irmãos solteiros, os filhos e enteados solteiros e os menores tutelados, desde que vivam sob o mesmo teto.",
     gabarito: "C",
-    comentario: "Art. 20, § 1º, da LOAS.",
+    comentario:
+      "Correto. É a composição prevista no art. 20, § 1º, da LOAS. O cálculo soma os rendimentos mensais dos membros da família que vivam sob o mesmo teto, ressalvadas as exclusões legais, como a do § 14 (art. 20, § 3º-A, incluído pela Lei nº 15.077/2024).",
     fundamento: "Lei nº 8.742/1993, art. 20, § 1º",
   },
   {
@@ -123,8 +127,9 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "O pescador artesanal que exerça sua atividade de forma ininterrupta, individualmente ou em regime de economia familiar, faz jus ao seguro-desemprego de um salário mínimo mensal durante o período de defeso.",
     gabarito: "C",
-    comentario: "Art. 1º da Lei nº 10.779/2003. A habilitação é feita pelo INSS.",
-    fundamento: "Lei nº 10.779/2003, art. 1º",
+    comentario:
+      "Correto. É o seguro-desemprego do pescador artesanal (seguro-defeso), previsto no art. 1º da Lei nº 10.779/2003. Atenção: desde a Lei nº 15.265/2025, cabe ao Ministério do Trabalho e Emprego (e não mais ao INSS) receber os requerimentos e habilitar os beneficiários (art. 2º).",
+    fundamento: "Lei nº 10.779/2003, arts. 1º e 2º (redação da Lei nº 15.265/2025)",
   },
   {
     id: "loas-013",
@@ -133,8 +138,9 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "A pensão especial devida às pessoas atingidas pela hanseníase submetidas a isolamento e internação compulsórios é mensal, vitalícia e intransferível.",
     gabarito: "C",
-    comentario: "Lei nº 11.520/2007 — destina-se a quem foi internado compulsoriamente em hospitais-colônia até 31/12/1986.",
-    fundamento: "Lei nº 11.520/2007, art. 1º",
+    comentario:
+      "Correto. A Lei nº 11.520/2007 concede pensão especial mensal, vitalícia e intransferível, a título de indenização, às pessoas atingidas pela hanseníase submetidas compulsoriamente, até 31/12/1986, a isolamento (domiciliar ou em seringais) ou a internação em hospitais-colônia. A Lei nº 14.736/2023 estendeu a pensão aos filhos separados dos genitores em razão desse isolamento (art. 1º-A).",
+    fundamento: "Lei nº 11.520/2007, arts. 1º e 1º-A",
   },
   {
     id: "loas-014",
@@ -150,7 +156,7 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
   {
     id: "loas-015",
     pool: "loas",
-    assunto: "LOAS — princípios",
+    assunto: "LOAS — definição",
     enunciado:
       "A assistência social, direito do cidadão e dever do Estado, é política de seguridade social não contributiva, que provê os mínimos sociais.",
     gabarito: "C",
@@ -267,8 +273,9 @@ export const QUESTOES_ASSISTENCIA: Questao[] = [
     enunciado:
       "Em parecer conjunto com outros profissionais, o assistente social deve destacar sua área de conhecimento separadamente, delimitar o âmbito de sua atuação e identificar-se com seu número de registro no CRESS.",
     gabarito: "C",
-    comentario: "A Resolução CFESS nº 557/2009 disciplina pareceres, laudos e opiniões técnicas conjuntos, preservando a especificidade profissional.",
-    fundamento: "Resolução CFESS nº 557/2009",
+    comentario:
+      "Correto. A Resolução CFESS nº 557/2009 exige que, na intervenção conjunta, a opinião técnica do assistente social destaque separadamente sua área de conhecimento e delimite o âmbito de sua atuação (art. 4º, § 1º), e que ele se manifeste apenas sobre matéria de sua atribuição, assinando e indicando seu número de inscrição no CRESS (art. 4º, § 2º).",
+    fundamento: "Resolução CFESS nº 557/2009, art. 4º, §§ 1º e 2º",
   },
   {
     id: "ss-005",

@@ -10,7 +10,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "O período de carência exigido para a concessão do auxílio por incapacidade temporária é, em regra, de dez contribuições mensais.",
     gabarito: "E",
     comentario:
-      "A carência do auxílio por incapacidade temporária e da aposentadoria por incapacidade permanente é de 12 contribuições (art. 25, I). Dez contribuições é o número previsto no art. 25, III (salário-maternidade).",
+      "A carência do auxílio por incapacidade temporária e da aposentadoria por incapacidade permanente é de 12 contribuições (art. 25, I). Dez contribuições é o número que o art. 25, III, previa para o salário-maternidade da contribuinte individual, da segurada especial e da facultativa — exigência declarada inconstitucional pelo STF nas ADIs 2110 e 2111 (2024).",
     fundamento: "Lei nº 8.213/1991, art. 25, I",
   },
   {
@@ -29,8 +29,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     enunciado: "Independem de carência a pensão por morte, o salário-família e o auxílio-acidente.",
     gabarito: "C",
     comentario:
-      "Art. 26, I, da Lei nº 8.213/1991. Também independem: salário-maternidade da empregada, doméstica e avulsa; serviço social; reabilitação profissional; benefícios por incapacidade decorrentes de acidente ou doenças listadas.",
-    fundamento: "Lei nº 8.213/1991, art. 26",
+      "Art. 26, I, da Lei nº 8.213/1991. Também independem: serviço social; reabilitação profissional; benefícios por incapacidade decorrentes de acidente de qualquer natureza, doença profissional/do trabalho ou doenças listadas; e o salário-maternidade — a lei já dispensava a carência para empregada, doméstica e avulsa (art. 26, VI), e o STF (ADIs 2110 e 2111, 2024) declarou inconstitucional a carência exigida das demais seguradas.",
+    fundamento: "Lei nº 8.213/1991, art. 26; STF, ADIs 2110 e 2111",
   },
   {
     id: "ben-004",
@@ -51,7 +51,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "Havendo perda da qualidade de segurado, para a concessão de auxílio por incapacidade temporária, o segurado deverá contar, a partir da nova filiação, com metade do período de carência exigido.",
     gabarito: "C",
     comentario:
-      "Art. 27-A da Lei nº 8.213/1991 (Lei nº 13.846/2019): metade da carência para auxílio por incapacidade temporária, aposentadoria por incapacidade permanente, salário-maternidade e auxílio-reclusão.",
+      "Art. 27-A da Lei nº 8.213/1991 (Lei nº 13.846/2019): metade da carência para auxílio por incapacidade temporária (6 contribuições), aposentadoria por incapacidade permanente e auxílio-reclusão (12). O texto ainda menciona o salário-maternidade, mas a carência desse benefício foi afastada pelo STF nas ADIs 2110 e 2111 (2024).",
     fundamento: "Lei nº 8.213/1991, art. 27-A",
   },
   {
@@ -83,7 +83,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     enunciado:
       "O período de graça de doze meses do segurado obrigatório pode ser prorrogado para até 24 meses se ele já tiver pago mais de 120 contribuições sem interrupção que acarrete perda da qualidade, e acrescido de mais 12 meses se comprovar situação de desemprego pelo registro no órgão próprio.",
     gabarito: "C",
-    comentario: "§§ 1º e 2º do art. 15 da Lei nº 8.213/1991 — o período pode chegar a 36 meses.",
+    comentario:
+      "§§ 1º e 2º do art. 15 da Lei nº 8.213/1991 — o período pode chegar a 36 meses. Obs.: a jurisprudência (STJ, TNU) admite comprovar o desemprego por outros meios além do registro no órgão do Ministério do Trabalho.",
     fundamento: "Lei nº 8.213/1991, art. 15, §§ 1º e 2º",
   },
   {
@@ -157,18 +158,18 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "A pensão por morte do cônjuge ou companheiro dura apenas quatro meses se o óbito ocorrer sem que o segurado tenha vertido 18 contribuições mensais ou se o casamento ou a união estável tiver sido iniciado em menos de dois anos antes do óbito, ressalvados, entre outros, os casos de óbito decorrente de acidente.",
     gabarito: "C",
     comentario:
-      "Art. 77, § 2º, V, b, da Lei nº 8.213/1991. Cumpridos os requisitos, a duração varia conforme a idade do beneficiário na data do óbito.",
-    fundamento: "Lei nº 8.213/1991, art. 77, § 2º, V",
+      "Art. 77, § 2º, V, b, da Lei nº 8.213/1991. A regra dos 4 meses não se aplica se o óbito decorrer de acidente de qualquer natureza ou de doença profissional ou do trabalho (§ 2º-A), nem ao cônjuge/companheiro inválido ou com deficiência. Cumpridos os requisitos, a duração varia conforme a idade do beneficiário na data do óbito (alínea c).",
+    fundamento: "Lei nº 8.213/1991, art. 77, §§ 2º, V, e 2º-A",
   },
   {
     id: "ben-016",
     pool: "beneficios",
     assunto: "Aposentadoria programada",
     enunciado:
-      "Pela regra permanente da EC nº 103/2019, a aposentadoria no RGPS exige 62 anos de idade, se mulher, e 65 anos, se homem, observado tempo mínimo de contribuição.",
+      "Pela regra permanente da EC nº 103/2019, a aposentadoria programada do trabalhador urbano no RGPS exige 62 anos de idade, se mulher, e 65 anos, se homem, observado tempo mínimo de contribuição.",
     gabarito: "C",
     comentario:
-      "Art. 201, § 7º, I, da CF c/c art. 19 da EC nº 103/2019: 62/65 anos, com 15 anos de contribuição (mulher) e 20 anos (homem que se filiar após a reforma).",
+      "Art. 201, § 7º, I, da CF c/c art. 19 da EC nº 103/2019: 62/65 anos, com 15 anos de contribuição (mulher) e 20 anos (homem que se filiar após a reforma; para o homem já filiado, 15 anos — art. 18). Rurais, professores e pessoas com deficiência têm regras próprias.",
     fundamento: "CF/1988, art. 201, § 7º, I; EC nº 103/2019, art. 19",
   },
   {
@@ -189,7 +190,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     enunciado:
       "Após a EC nº 103/2019, o salário de benefício corresponde à média aritmética simples de 100% dos salários de contribuição desde julho de 1994 ou desde o início da contribuição, se posterior.",
     gabarito: "C",
-    comentario: "Art. 26 da EC nº 103/2019 — acabou o descarte dos 20% menores salários da regra anterior.",
+    comentario:
+      "Art. 26 da EC nº 103/2019 — acabou o descarte automático dos 20% menores salários da regra anterior. O § 6º permite excluir contribuições que reduzam a média, desde que mantido o tempo mínimo exigido, mas o tempo excluído não é aproveitado para nenhum outro fim.",
     fundamento: "EC nº 103/2019, art. 26",
   },
   {
@@ -211,7 +213,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "A aposentadoria por incapacidade permanente decorrente de acidente do trabalho, doença profissional ou do trabalho corresponde a 100% da média dos salários de contribuição.",
     gabarito: "C",
     comentario:
-      "Art. 26, § 3º, II, da EC nº 103/2019. Nos demais casos aplica-se a regra 60% + 2 p.p. por ano excedente.",
+      "Art. 26, § 3º, II, da EC nº 103/2019. Nos demais casos aplica-se a regra 60% + 2 p.p. por ano excedente — regra que o STF considerou constitucional no Tema 1300 da repercussão geral.",
     fundamento: "EC nº 103/2019, art. 26, § 3º, II",
   },
   {
@@ -232,7 +234,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "No caso do segurado empregado, o auxílio por incapacidade temporária é devido a contar do 31º dia do afastamento, cabendo à empresa pagar o salário integral nos primeiros 30 dias.",
     gabarito: "E",
     comentario:
-      "A empresa paga os primeiros 15 dias e o benefício é devido a partir do 16º dia de afastamento (art. 60, caput e § 3º, da Lei nº 8.213/1991).",
+      "A empresa paga os primeiros 15 dias e o benefício é devido a partir do 16º dia de afastamento (art. 60, caput e § 3º, da Lei nº 8.213/1991). O prazo de 30 dias chegou a ser previsto na MP nº 664/2014, mas não foi mantido na lei de conversão.",
     fundamento: "Lei nº 8.213/1991, art. 60",
   },
   {
@@ -275,7 +277,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "O salário-maternidade pago pelo RGPS tem duração de 180 dias para todas as seguradas.",
     gabarito: "E",
     comentario:
-      "O salário-maternidade do RGPS dura 120 dias, com início entre 28 dias antes do parto e a data do parto (art. 71). A prorrogação de 60 dias do Programa Empresa Cidadã é custeada pela empresa, não pelo RGPS.",
+      "Em regra, o salário-maternidade do RGPS dura 120 dias, com início entre 28 dias antes do parto e a data do parto (art. 71). Há situações específicas de extensão — ex.: prorrogação de 60 dias no nascimento de criança com deficiência permanente decorrente de síndrome congênita associada ao vírus Zika (§ 2º) e pagamento durante a internação superior a duas semanas por complicações do parto, mais 120 dias após a alta (§ 3º, Lei nº 15.222/2025). A prorrogação de 60 dias do Programa Empresa Cidadã é custeada pela empresa, não pelo RGPS.",
     fundamento: "Lei nº 8.213/1991, art. 71",
   },
   {
@@ -285,7 +287,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     enunciado:
       "Ao segurado ou segurada que adotar ou obtiver guarda judicial para fins de adoção de criança é devido salário-maternidade por 120 dias, independentemente da idade da criança adotada.",
     gabarito: "C",
-    comentario: "Art. 71-A da Lei nº 8.213/1991 (Lei nº 12.873/2013). O benefício também é devido ao segurado do sexo masculino e é pago diretamente pela Previdência.",
+    comentario:
+      "Art. 71-A da Lei nº 8.213/1991 (Lei nº 12.873/2013). Antes, o prazo variava conforme a idade da criança; hoje é de 120 dias para qualquer criança (até 12 anos incompletos, conceito do ECA). O benefício também é devido ao segurado do sexo masculino e é pago diretamente pela Previdência.",
     fundamento: "Lei nº 8.213/1991, art. 71-A",
   },
   {
@@ -296,8 +299,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "O salário-família é devido ao segurado de baixa renda na proporção do número de filhos ou equiparados de até 18 anos de idade ou inválidos de qualquer idade.",
     gabarito: "E",
     comentario:
-      "O limite é de até 14 anos de idade (ou inválido de qualquer idade), conforme arts. 65 e 66 da Lei nº 8.213/1991 e art. 7º, XII, da CF.",
-    fundamento: "Lei nº 8.213/1991, art. 65",
+      "O limite é de até 14 anos de idade (ou inválido de qualquer idade), conforme art. 66 da Lei nº 8.213/1991. A CF (art. 7º, XII) apenas prevê o salário-família para o dependente do trabalhador de baixa renda, sem fixar idade. É devido ao empregado (inclusive doméstico) e ao avulso, não ao contribuinte individual.",
+    fundamento: "Lei nº 8.213/1991, arts. 65 e 66",
   },
   {
     id: "ben-029",
@@ -314,21 +317,23 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     id: "ben-030",
     pool: "beneficios",
     assunto: "Acumulação de benefícios",
-    enunciado: "É permitido o recebimento conjunto de aposentadoria e auxílio-acidente.",
+    enunciado:
+      "De acordo com a redação vigente da Lei nº 8.213/1991, é permitido o recebimento conjunto de qualquer aposentadoria com o auxílio-acidente.",
     gabarito: "E",
     comentario:
-      "Desde a Lei nº 9.528/1997, o auxílio-acidente cessa com a aposentadoria (art. 86, § 2º). A vedação também consta do art. 124.",
-    fundamento: "Lei nº 8.213/1991, arts. 86, § 2º, e 124",
+      "Desde a Lei nº 9.528/1997, é vedada a acumulação do auxílio-acidente com qualquer aposentadoria: ele é devido até a véspera do início da aposentadoria (art. 86, §§ 1º a 3º), e seu valor passa a integrar o salário de contribuição para o cálculo da aposentadoria (art. 31). Exceção por direito adquirido: Súmula 507 do STJ (lesão e aposentadoria anteriores a 11/11/1997).",
+    fundamento: "Lei nº 8.213/1991, arts. 31 e 86, §§ 1º a 3º; STJ, Súmula 507",
   },
   {
     id: "ben-031",
     pool: "beneficios",
     assunto: "Acumulação de benefícios",
     enunciado:
-      "É vedado o recebimento conjunto de mais de uma pensão deixada por cônjuge ou companheiro, ressalvado o direito de opção pela mais vantajosa.",
+      "No âmbito do RGPS, é vedado o recebimento conjunto de mais de uma pensão deixada por cônjuge ou companheiro, ressalvado o direito de opção pela mais vantajosa.",
     gabarito: "C",
-    comentario: "Art. 124, VI, da Lei nº 8.213/1991.",
-    fundamento: "Lei nº 8.213/1991, art. 124, VI",
+    comentario:
+      "Art. 124, VI, da Lei nº 8.213/1991, reforçado pelo art. 24, caput, da EC nº 103/2019 (vedação no mesmo regime). Pensões de regimes diferentes (ex.: RGPS + RPPS) podem ser acumuladas, com redução por faixas do benefício menos vantajoso.",
+    fundamento: "Lei nº 8.213/1991, art. 124, VI; EC nº 103/2019, art. 24",
   },
   {
     id: "ben-032",
@@ -339,7 +344,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     gabarito: "E",
     comentario:
       "A acumulação é permitida: recebe-se 100% do benefício mais vantajoso e parte do outro, calculada por faixas — 100% até 1 salário mínimo, 60% do que exceder 1 até 2 SM, 40% de 2 a 3 SM, 20% de 3 a 4 SM e 10% acima de 4 SM.",
-    fundamento: "EC nº 103/2019, art. 24",
+    fundamento: "EC nº 103/2019, art. 24, §§ 1º e 2º",
   },
   {
     id: "ben-033",
@@ -367,19 +372,21 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     pool: "beneficios",
     assunto: "Aposentadoria especial",
     enunciado:
-      "Pela EC nº 103/2019, a aposentadoria especial passou a exigir idade mínima de 55, 58 ou 60 anos, conforme a atividade exija 15, 20 ou 25 anos de efetiva exposição a agentes nocivos.",
+      "A EC nº 103/2019 vedou a conversão de tempo especial em tempo comum em relação ao trabalho exercido após a data de sua entrada em vigor.",
     gabarito: "C",
-    comentario: "Art. 19, § 1º, I, da EC nº 103/2019.",
-    fundamento: "EC nº 103/2019, art. 19, § 1º, I",
+    comentario:
+      "Art. 25, § 2º, da EC nº 103/2019: a conversão continua possível apenas para o tempo especial cumprido até 13/11/2019 (vedada também pelo art. 201, § 14, da CF a contagem de tempo fictício). Atenção à jurisprudência: no julgamento da ADI 6309 (junho/2026), o STF manteve essa vedação e o novo cálculo (60% + 2 p.p.), mas declarou inconstitucional a idade mínima de 55/58/60 anos que o art. 19, § 1º, I, havia criado para a aposentadoria especial.",
+    fundamento: "EC nº 103/2019, art. 25, § 2º; STF, ADI 6309",
   },
   {
     id: "ben-036",
     pool: "beneficios",
     assunto: "Aposentadoria do professor",
     enunciado:
-      "O professor que comprove 25 anos de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio poderá aposentar-se aos 57 anos, se mulher, e aos 60 anos, se homem.",
+      "O professor filiado ao RGPS após a EC nº 103/2019 que comprove 25 anos de efetivo exercício das funções de magistério na educação infantil e no ensino fundamental e médio poderá aposentar-se aos 57 anos, se mulher, e aos 60 anos, se homem.",
     gabarito: "C",
-    comentario: "Art. 19, § 1º, II, da EC nº 103/2019 (regra para quem se filiar após a reforma).",
+    comentario:
+      "Art. 19, § 1º, II, da EC nº 103/2019: 25 anos de magistério para ambos os sexos, com 57 (mulher) ou 60 anos (homem). Quem já era filiado antes da reforma dispõe de regras de transição próprias (arts. 15, § 3º, 16, § 2º, e 20, § 1º). O magistério no ensino superior não dá direito à regra especial.",
     fundamento: "EC nº 103/2019, art. 19, § 1º, II",
   },
   {
@@ -460,8 +467,9 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     assunto: "Reabilitação profissional",
     enunciado: "A reabilitação profissional é prestação que depende de carência de doze contribuições mensais.",
     gabarito: "E",
-    comentario: "Serviço social e reabilitação profissional independem de carência (art. 26, V, da Lei nº 8.213/1991).",
-    fundamento: "Lei nº 8.213/1991, art. 26, V",
+    comentario:
+      "Serviço social e reabilitação profissional independem de carência (art. 26, IV e V, da Lei nº 8.213/1991). Doze contribuições é a carência do auxílio por incapacidade temporária e da aposentadoria por incapacidade permanente (art. 25, I).",
+    fundamento: "Lei nº 8.213/1991, art. 26, IV e V",
   },
   {
     id: "ben-045",

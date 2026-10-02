@@ -218,7 +218,7 @@ export const NORMAS: Norma[] = [
     url: "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm",
     prioridade: "baixa",
     cargos: SO_TECNICO,
-    dica: "Lei curta: requisitos para receber o seguro-desemprego no período de defeso (art. 1º), documentos exigidos (art. 2º) e sanções para quem usar atestado falso (art. 3º).",
+    dica: "Lei curta: requisitos para receber o seguro-desemprego no período de defeso (art. 1º) e habilitação (art. 2º) — que desde a Lei nº 15.265/2025 cabe ao Ministério do Trabalho e Emprego, não mais ao INSS.",
   },
   {
     id: "lei-9796-1999",
@@ -254,7 +254,7 @@ export const NORMAS: Norma[] = [
     url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/decreto/d8424.htm",
     prioridade: "baixa",
     cargos: SO_TECNICO,
-    dica: "Requisitos do pescador artesanal, habilitação no INSS e hipóteses de cancelamento do benefício.",
+    dica: "Requisitos do pescador artesanal e hipóteses de cancelamento. Atenção: desde a Lei nº 15.265/2025, a habilitação do seguro-defeso é feita pelo Ministério do Trabalho e Emprego (antes era o INSS).",
   },
   {
     id: "lei-11340-2006",

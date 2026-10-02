@@ -109,6 +109,7 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     gabarito: "E",
     comentario:
       "O conceito de seguridade social (saúde + previdência + assistência) foi inaugurado pela CF/1988. A Constituição de 1946 empregou a expressão 'previdência social'.",
+    fundamento: "CF/1988, art. 194, caput",
   },
   {
     id: "seg-011",
@@ -158,10 +159,10 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     pool: "seguridade",
     assunto: "Segurado especial",
     enunciado:
-      "É segurado especial o produtor rural que explore atividade agropecuária em área de até quatro módulos fiscais, individualmente ou em regime de economia familiar, ainda que com o auxílio eventual de terceiros.",
+      "Pode ser segurado especial o produtor rural pessoa física, residente no imóvel rural ou em aglomerado urbano ou rural próximo a ele, que explore atividade agropecuária em área de até quatro módulos fiscais, individualmente ou em regime de economia familiar, ainda que com o auxílio eventual de terceiros.",
     gabarito: "C",
     comentario:
-      "Limite de 4 módulos fiscais para a atividade agropecuária (art. 11, VII, a, 1). Pescador artesanal e seringueiro/extrativista vegetal também podem ser segurados especiais.",
+      "Limite de 4 módulos fiscais para a atividade agropecuária (art. 11, VII, a, 1), exigida a residência no imóvel ou em aglomerado próximo. Pescador artesanal e seringueiro/extrativista vegetal também podem ser segurados especiais. O enquadramento ainda depende de outras condições legais (ex.: limites de outras fontes de renda — art. 11, §§ 9º e 10).",
     fundamento: "Lei nº 8.213/1991, art. 11, VII",
   },
   {
@@ -180,10 +181,10 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     pool: "seguridade",
     assunto: "Segurado facultativo",
     enunciado:
-      "É vedada a filiação ao RGPS, na qualidade de segurado facultativo, de pessoa participante de regime próprio de previdência social.",
+      "Conforme o texto constitucional, é vedada a filiação ao RGPS, na qualidade de segurado facultativo, de pessoa participante de regime próprio de previdência social.",
     gabarito: "C",
     comentario:
-      "Vedação do art. 201, § 5º, da CF. O Decreto nº 3.048/1999 ressalva o afastamento sem vencimentos, desde que não permitida contribuição ao RPPS nessa condição.",
+      "Vedação literal do art. 201, § 5º, da CF. Atenção: o Decreto nº 3.048/1999 (art. 11, § 2º) ressalva o servidor afastado sem vencimentos, desde que o RPPS não permita contribuição nessa condição.",
     fundamento: "CF/1988, art. 201, § 5º; Decreto nº 3.048/1999, art. 11, § 2º",
   },
   {
@@ -194,8 +195,8 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
       "Para o segurado obrigatório, a filiação ao RGPS decorre automaticamente do exercício de atividade remunerada, ao passo que, para o segurado facultativo, decorre da inscrição formalizada com o pagamento da primeira contribuição.",
     gabarito: "C",
     comentario:
-      "Filiação é o vínculo jurídico com a previdência; inscrição é o ato cadastral. Para o facultativo, a filiação depende da inscrição + primeira contribuição sem atraso.",
-    fundamento: "Decreto nº 3.048/1999, art. 20",
+      "Filiação é o vínculo jurídico com a previdência; inscrição é o ato cadastral. Para o facultativo, a filiação é ato voluntário e só produz efeitos a partir da inscrição e do primeiro recolhimento, sem retroagir a competências anteriores à inscrição (art. 11, § 3º).",
+    fundamento: "Decreto nº 3.048/1999, arts. 11, § 3º, e 20, § 1º",
   },
   {
     id: "seg-019",
@@ -216,7 +217,7 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
       "O contribuinte individual que opta pelo plano simplificado de previdência contribui com 11% sobre o salário mínimo e mantém o direito à aposentadoria por tempo de contribuição.",
     gabarito: "E",
     comentario:
-      "Quem contribui pelo plano simplificado (11% sobre o salário mínimo) NÃO tem direito à aposentadoria por tempo de contribuição, salvo se complementar a contribuição. MEI e facultativo de baixa renda pagam 5%; a regra geral do CI é 20%.",
+      "A opção pelo plano simplificado (11% sobre o salário mínimo, para o CI que trabalha por conta própria e para o facultativo) implica EXCLUSÃO do direito à aposentadoria por tempo de contribuição — hoje relevante para as regras de transição da EC nº 103/2019 —, salvo se o segurado complementar a contribuição (diferença de 9%, com juros). MEI e facultativo de baixa renda pagam 5%; a regra geral do CI é 20%.",
     fundamento: "Lei nº 8.212/1991, art. 21, §§ 2º e 3º",
   },
   {
@@ -227,8 +228,8 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
       "A contribuição da empresa destinada ao financiamento dos benefícios concedidos em razão do grau de incidência de incapacidade laborativa decorrente dos riscos ambientais do trabalho (GILRAT) é de 1%, 2% ou 3%, conforme o risco da atividade preponderante seja leve, médio ou grave.",
     gabarito: "C",
     comentario:
-      "Art. 22, II, da Lei nº 8.212/1991. Essas alíquotas podem ser reduzidas pela metade ou dobradas pelo FAP (Fator Acidentário de Prevenção).",
-    fundamento: "Lei nº 8.212/1991, art. 22, II",
+      "Art. 22, II, da Lei nº 8.212/1991 (a contribuição também financia a aposentadoria especial). Essas alíquotas podem ser reduzidas em até 50% ou aumentadas em até 100% pelo FAP (Fator Acidentário de Prevenção — Lei nº 10.666/2003, art. 10).",
+    fundamento: "Lei nº 8.212/1991, art. 22, II; Lei nº 10.666/2003, art. 10",
   },
   {
     id: "seg-022",
@@ -282,7 +283,7 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     gabarito: "E",
     comentario:
       "Empresa: até o dia 20 do mês seguinte, ANTECIPANDO-se para o dia útil anterior. O dia 15 com prorrogação é a regra do contribuinte individual e do facultativo. Empregador doméstico: dia 7.",
-    fundamento: "Lei nº 8.212/1991, art. 30, I, b",
+    fundamento: "Lei nº 8.212/1991, art. 30, I, b, II e § 2º",
   },
   {
     id: "seg-027",
@@ -292,7 +293,7 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
       "Compete ao INSS arrecadar, fiscalizar e cobrar as contribuições sociais incidentes sobre a folha de salários.",
     gabarito: "E",
     comentario:
-      "Desde a Lei nº 11.457/2007 (Super-Receita), essas atribuições são da Secretaria Especial da Receita Federal do Brasil. O INSS concede e mantém benefícios.",
+      "Desde a Lei nº 11.457/2007 (Super-Receita), essas atribuições são da Secretaria da Receita Federal do Brasil (RFB). O INSS concede e mantém benefícios.",
     fundamento: "Lei nº 11.457/2007, art. 2º",
   },
   {
@@ -303,8 +304,8 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
       "É de dez anos o prazo de decadência do direito do segurado de pedir a revisão do ato de concessão de benefício.",
     gabarito: "C",
     comentario:
-      "Art. 103 da Lei nº 8.213/1991: 10 anos, contados do dia primeiro do mês subsequente ao do recebimento da primeira prestação.",
-    fundamento: "Lei nº 8.213/1991, art. 103",
+      "Art. 103 da Lei nº 8.213/1991: 10 anos, contados do dia primeiro do mês subsequente ao do recebimento da primeira prestação (ou da data em que a prestação deveria ter sido paga com o valor revisto). Atenção: na ADI 6096 (2020), o STF declarou inconstitucional a extensão da decadência ao indeferimento, cancelamento ou cessação de benefício — o direito ao benefício em si (fundo de direito) não decai.",
+    fundamento: "Lei nº 8.213/1991, art. 103; STF, ADI 6096",
   },
   {
     id: "seg-029",
@@ -313,7 +314,8 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     enunciado:
       "Prescreve em cinco anos a ação para haver prestações vencidas ou quaisquer restituições devidas pela previdência social, ressalvado o direito dos menores, incapazes e ausentes.",
     gabarito: "C",
-    comentario: "Parágrafo único do art. 103 da Lei nº 8.213/1991 — prescrição quinquenal das parcelas.",
+    comentario:
+      "Parágrafo único do art. 103 da Lei nº 8.213/1991 — prescrição quinquenal das parcelas, contada da data em que cada uma deveria ter sido paga. Contra menores, incapazes e ausentes não corre a prescrição, na forma do Código Civil.",
     fundamento: "Lei nº 8.213/1991, art. 103, parágrafo único",
   },
   {
@@ -355,7 +357,8 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     enunciado:
       "No crime de apropriação indébita previdenciária, é extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuições e presta as informações devidas antes do início da ação fiscal.",
     gabarito: "C",
-    comentario: "Art. 168-A, § 2º, do CP.",
+    comentario:
+      "Art. 168-A, § 2º, do CP. Além disso, pela legislação extrapenal (Lei nº 10.684/2003, art. 9º, § 2º) e pela jurisprudência do STF/STJ, o pagamento integral do débito, mesmo após o início da ação fiscal, também extingue a punibilidade.",
     fundamento: "Código Penal, art. 168-A, § 2º",
   },
   {
@@ -374,10 +377,11 @@ export const QUESTOES_SEGURIDADE: Questao[] = [
     pool: "seguridade",
     assunto: "Recursos administrativos",
     enunciado:
-      "O Conselho de Recursos da Previdência Social (CRPS) é composto por Juntas de Recursos, que julgam em primeira instância recursal, e por Câmaras de Julgamento, que julgam em segunda instância.",
+      "Entre os órgãos que compõem o Conselho de Recursos da Previdência Social (CRPS) estão as Juntas de Recursos, que julgam os recursos contra decisões do INSS, e as Câmaras de Julgamento, que julgam os recursos interpostos contra as decisões das Juntas.",
     gabarito: "C",
-    comentario: "Estrutura prevista no Decreto nº 3.048/1999 (arts. 303 e seguintes).",
-    fundamento: "Decreto nº 3.048/1999, art. 303",
+    comentario:
+      "Decreto nº 3.048/1999, art. 303, § 1º: o CRPS compreende as Juntas de Recursos (primeira instância recursal), as Câmaras de Julgamento (segunda instância) e o Conselho Pleno, que uniformiza a jurisprudência previdenciária mediante enunciados.",
+    fundamento: "Decreto nº 3.048/1999, art. 303, § 1º",
   },
   {
     id: "seg-036",

@@ -99,7 +99,7 @@ export const QUESTOES_SERVICO_SOCIAL: Questao[] = [
     gabarito: "C",
     comentario:
       "Correto. Trata-se de atribuição privativa (art. 5º, VI). O Código de Ética, por sua vez, veda permitir ou exercer supervisão de estagiário em instituição que não tenha assistente social no quadro para acompanhá-lo diretamente.",
-    fundamento: "Lei nº 8.662/1993, art. 5º, VI; Resolução CFESS nº 273/1993, art. 4º",
+    fundamento: "Lei nº 8.662/1993, art. 5º, VI; Resolução CFESS nº 273/1993, art. 4º, d",
   },
   {
     id: "ss-110",
@@ -109,8 +109,8 @@ export const QUESTOES_SERVICO_SOCIAL: Questao[] = [
       "Segundo a Lei nº 8.662/1993, o diploma de graduação em Serviço Social, devidamente registrado, basta para o exercício da profissão, sendo a inscrição no Conselho Regional de Serviço Social facultativa.",
     gabarito: "E",
     comentario:
-      "Errado. Além do diploma (e, se obtido no exterior, da revalidação), o exercício profissional exige prévio registro no CRESS com jurisdição sobre a área de atuação. CFESS e CRESS formam, em conjunto, a entidade que disciplina, fiscaliza e defende o exercício da profissão.",
-    fundamento: "Lei nº 8.662/1993, art. 2º e parágrafo único",
+      "Errado. Além do diploma (e, se obtido no exterior, da revalidação), o exercício profissional exige prévio registro no CRESS com jurisdição sobre a área de atuação. CFESS e CRESS constituem, em conjunto, a entidade que tem por objetivo básico disciplinar e defender o exercício da profissão (art. 7º).",
+    fundamento: "Lei nº 8.662/1993, art. 2º e parágrafo único; art. 7º",
   },
   {
     id: "ss-111",
@@ -197,7 +197,7 @@ export const QUESTOES_SERVICO_SOCIAL: Questao[] = [
       "A concessão do BPC à pessoa com deficiência depende de avaliação composta por avaliação médica, realizada pela Perícia Médica Federal, e avaliação social, realizada pelo Serviço Social do INSS, com instrumentos específicos baseados nos princípios da Classificação Internacional de Funcionalidade, Incapacidade e Saúde (CIF).",
     gabarito: "C",
     comentario:
-      "Correto. A avaliação considera não só funções e estruturas do corpo, mas também fatores ambientais, atividades e participação social, conforme o modelo biopsicossocial.",
+      "Correto. O art. 20, § 6º, da LOAS atribui a avaliação médica aos médicos peritos (hoje integrantes da Perícia Médica Federal) e a avaliação social aos assistentes sociais do INSS, que pode firmar parcerias para a avaliação social sob supervisão de seu Serviço Social (§ 6º-A). A avaliação considera não só funções e estruturas do corpo, mas também fatores ambientais, atividades e participação social, conforme o modelo biopsicossocial.",
     fundamento: "Lei nº 8.742/1993, art. 20, § 6º; Decreto nº 6.214/2007, art. 16",
   },
   {

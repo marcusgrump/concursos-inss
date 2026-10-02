@@ -70,7 +70,8 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
     enunciado:
       "Conceder-se-á mandado de injunção sempre que a falta de norma regulamentadora torne inviável o exercício dos direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania.",
     gabarito: "C",
-    comentario: "Art. 5º, LXXI, da CF. O MI combate a omissão legislativa.",
+    comentario:
+      "Art. 5º, LXXI, da CF. O MI combate a omissão de norma regulamentadora (legislativa ou administrativa) que inviabiliza o exercício de direito constitucional; o procedimento está na Lei nº 13.300/2016.",
     fundamento: "CF/1988, art. 5º, LXXI",
   },
   {
@@ -120,7 +121,8 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
     enunciado:
       "O alistamento eleitoral e o voto são facultativos para os analfabetos, para os maiores de setenta anos e para os maiores de dezesseis e menores de dezoito anos.",
     gabarito: "C",
-    comentario: "Art. 14, § 1º, II, da CF. Para os maiores de 18 anos, são obrigatórios.",
+    comentario:
+      "Art. 14, § 1º, II, da CF. Para os demais maiores de 18 anos (isto é, alfabetizados e com até 70 anos), alistamento e voto são obrigatórios (inciso I).",
     fundamento: "CF/1988, art. 14, § 1º",
   },
   {
@@ -151,7 +153,7 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
       "É permitida a acumulação remunerada de dois cargos públicos técnicos, desde que haja compatibilidade de horários.",
     gabarito: "E",
     comentario:
-      "As hipóteses são: dois cargos de professor; um de professor com outro técnico ou científico; dois de profissionais de saúde com profissões regulamentadas — sempre com compatibilidade de horários.",
+      "Dois cargos técnicos não estão entre as exceções constitucionais. As hipóteses são: dois cargos de professor; um de professor com outro técnico ou científico; dois de profissionais de saúde com profissões regulamentadas — sempre com compatibilidade de horários e respeitado o teto remuneratório.",
     fundamento: "CF/1988, art. 37, XVI",
   },
   {
@@ -193,7 +195,7 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
     enunciado: "O direito de greve do servidor público civil será exercido nos termos e nos limites definidos em lei específica.",
     gabarito: "C",
     comentario:
-      "Art. 37, VII. Enquanto não editada a lei, o STF determinou a aplicação, no que couber, da Lei de Greve do setor privado (Lei nº 7.783/1989). Ao militar, a greve é proibida.",
+      "Art. 37, VII. Enquanto não editada a lei, o STF determinou a aplicação, no que couber, da Lei de Greve do setor privado (Lei nº 7.783/1989). Ao militar, a greve é proibida (art. 142, § 3º, IV), e o STF estendeu a vedação aos servidores que atuam diretamente na segurança pública (Tema 541).",
     fundamento: "CF/1988, art. 37, VII",
   },
   {
@@ -221,9 +223,10 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
     pool: "etica",
     assunto: "Regras deontológicas",
     enunciado:
-      "A publicidade de qualquer ato administrativo constitui requisito de eficácia e moralidade, e sua omissão compromete eticamente o bem comum, sendo imputável a quem a negar.",
+      "Ressalvados os casos de segurança nacional, investigações policiais ou interesse superior do Estado e da Administração Pública, preservados em processo previamente declarado sigiloso, a publicidade de qualquer ato administrativo constitui requisito de eficácia e moralidade, e sua omissão compromete eticamente o bem comum, sendo imputável a quem a negar.",
     gabarito: "C",
-    comentario: "Inciso VII do Código. Ressalvam-se os casos de segurança nacional, investigações policiais ou interesse superior do Estado.",
+    comentario:
+      "Inciso VII do Código. A publicidade é a regra; o sigilo só se admite nas hipóteses ressalvadas, e mesmo assim em processo previamente declarado sigiloso, nos termos da lei.",
     fundamento: "Decreto nº 1.171/1994, Anexo, inciso VII",
   },
   {
@@ -315,7 +318,8 @@ export const QUESTOES_CONSTITUCIONAL_ETICA: Questao[] = [
     enunciado:
       "Qualquer procedimento instaurado para apurar desrespeito às normas éticas será mantido com a chancela de 'reservado' até que esteja concluído.",
     gabarito: "C",
-    comentario: "Art. 13 do Decreto nº 6.029/2007. Após a conclusão, o acesso é garantido.",
+    comentario:
+      "Art. 13 do Decreto nº 6.029/2007. Concluída a investigação e após a deliberação da comissão, os autos deixam de ser reservados; documentos protegidos por sigilo legal, porém, continuam com acesso restrito (§§ 1º e 2º).",
     fundamento: "Decreto nº 6.029/2007, art. 13",
   },
   {
