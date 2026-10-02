@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando…</title>
+    <script>
+      // O app usa rotas com hash (#/edital). Se alguém abrir /concursos-inss/edital,
+      // o GitHub Pages devolve este 404: redirecionamos para /concursos-inss/#/edital.
+      ;(function () {
+        var partes = location.pathname.split("/").filter(Boolean)
+        var base = "/" + (partes.length ? partes[0] + "/" : "")
+        var resto = partes.slice(1).join("/")
+        location.replace(base + (resto ? "#/" + resto : "") + location.search)
+      })()
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando… <a href="/concursos-inss/">Abrir o app</a></p>
+  </body>
+</html>

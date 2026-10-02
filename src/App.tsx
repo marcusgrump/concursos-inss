@@ -1,19 +1,20 @@
 import { ThemeProvider } from "next-themes"
-import { lazy, useEffect } from "react"
+import { useEffect } from "react"
 import { HashRouter, Route, Routes, useLocation } from "react-router-dom"
 import { Layout } from "@/components/layout"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { lazyPagina } from "@/lib/lazy-pagina"
 import { PainelPage } from "@/pages/painel"
 
 // Demais páginas carregadas sob demanda (chunks separados no build).
-const EditalPage = lazy(() => import("@/pages/edital").then((m) => ({ default: m.EditalPage })))
-const QuestoesPage = lazy(() => import("@/pages/questoes").then((m) => ({ default: m.QuestoesPage })))
-const SimuladoPage = lazy(() => import("@/pages/simulado").then((m) => ({ default: m.SimuladoPage })))
-const FlashcardsPage = lazy(() => import("@/pages/flashcards").then((m) => ({ default: m.FlashcardsPage })))
-const RevisaoPage = lazy(() => import("@/pages/revisao").then((m) => ({ default: m.RevisaoPage })))
-const MateriaisPage = lazy(() => import("@/pages/materiais").then((m) => ({ default: m.MateriaisPage })))
-const ProgressoPage = lazy(() => import("@/pages/progresso").then((m) => ({ default: m.ProgressoPage })))
+const EditalPage = lazyPagina(() => import("@/pages/edital").then((m) => m.EditalPage))
+const QuestoesPage = lazyPagina(() => import("@/pages/questoes").then((m) => m.QuestoesPage))
+const SimuladoPage = lazyPagina(() => import("@/pages/simulado").then((m) => m.SimuladoPage))
+const FlashcardsPage = lazyPagina(() => import("@/pages/flashcards").then((m) => m.FlashcardsPage))
+const RevisaoPage = lazyPagina(() => import("@/pages/revisao").then((m) => m.RevisaoPage))
+const MateriaisPage = lazyPagina(() => import("@/pages/materiais").then((m) => m.MateriaisPage))
+const ProgressoPage = lazyPagina(() => import("@/pages/progresso").then((m) => m.ProgressoPage))
 
 function RolarAoTopo() {
   const { pathname } = useLocation()
