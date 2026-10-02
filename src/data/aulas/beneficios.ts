@@ -456,4 +456,159 @@ export const AULAS_BENEFICIOS: Aula[] = [
       "Lei nº 8.213/1991, arts. 48, 49, 57 e 58",
     ],
   },
+  {
+    id: "ben-transicao-ec103",
+    titulo: "EC nº 103/2019: as regras de transição da aposentadoria no RGPS",
+    pool: "beneficios",
+    topicos: ["tec-esp-19", "tec-esp-12"],
+    texto: [
+      "A EC nº 103/2019 entrou em vigor em 13/11/2019. Para não surpreender quem já contribuía, ela criou regras de transição para os segurados filiados ao RGPS até essa data. O segurado escolhe a regra que lhe for mais favorável — e quem já tinha cumprido todos os requisitos pelas regras antigas até 13/11/2019 tem direito adquirido a elas.",
+      "Regra dos pontos (art. 15): exige 30 anos de contribuição (mulher) ou 35 (homem) e uma soma de idade + tempo de contribuição de 86 pontos (mulher) ou 96 (homem) em 2019. A partir de 1º/01/2020, soma-se 1 ponto por ano, até 100 pontos (mulher) e 105 (homem). Idade e tempo são contados em dias, incluindo frações.",
+      "Idade mínima progressiva (art. 16): exige os mesmos 30/35 anos de contribuição e idade mínima de 56 anos (mulher) e 61 (homem) em 2019, acrescida de 6 meses a cada ano a partir de 2020, até chegar a 62 e 65 anos.",
+      "Pedágio de 50% (art. 17): só para quem, em 13/11/2019, já tinha mais de 28 anos de contribuição (mulher) ou 33 (homem). Exige 30/35 anos de contribuição mais um adicional de 50% do tempo que faltava naquela data. Não há idade mínima, mas o valor é a média multiplicada pelo fator previdenciário. Pedágio de 100% (art. 20): exige 57 anos (mulher) ou 60 (homem), 30/35 anos de contribuição e um adicional igual a 100% do tempo que faltava em 13/11/2019; em troca, o valor é de 100% da média.",
+      "Transição da aposentadoria por idade (art. 18): para os filiados antes da reforma, 15 anos de contribuição para ambos os sexos, 65 anos para o homem e, para a mulher, 60 anos em 2019, com acréscimo de 6 meses por ano a partir de 2020, até 62 anos (alcançados em 2023). Há ainda transição para a aposentadoria especial por pontos (art. 21): 66, 76 ou 86 pontos, com 15, 20 ou 25 anos de efetiva exposição, respectivamente.",
+      "O professor da educação básica tem versões reduzidas: nos pontos, 81 (mulher) e 91 (homem), +1 por ano até 92 e 100, com 25/30 anos de magistério; na idade progressiva, 51 e 56 anos, +6 meses por ano até 57 e 60; no pedágio de 100%, 52 e 55 anos, com 25/30 anos de magistério e o pedágio. Nas regras de pontos, idade progressiva, idade (art. 18) e especial, o valor segue a regra geral de 60% + 2 p.p.",
+    ],
+    pontosChave: [
+      "Data-chave: 13/11/2019 (entrada em vigor da EC nº 103/2019).",
+      "Pontos (art. 15): 86 (M) / 96 (H) em 2019, +1 por ano desde 2020, até 100 (M) / 105 (H); com 30/35 anos de contribuição.",
+      "Pontos em 2026: 93 (M) / 103 (H). Homens atingem 105 em 2028; mulheres, 100 em 2033.",
+      "Idade progressiva (art. 16): 56 (M) / 61 (H) em 2019, +6 meses por ano, até 62/65; com 30/35 anos de contribuição. Em 2026: 59,5 (M) / 64,5 (H).",
+      "Pedágio de 50% (art. 17): só para quem tinha mais de 28 (M) / 33 (H) anos em 13/11/2019; sem idade mínima; valor com fator previdenciário.",
+      "Pedágio de 100% (art. 20): 57 (M) / 60 (H) anos + 30/35 de contribuição + pedágio de 100% do tempo faltante; valor = 100% da média.",
+      "Idade (art. 18): 15 anos de contribuição; 65 (H); mulher 60 em 2019, +6 meses por ano, 62 desde 2023.",
+      "Especial por pontos (art. 21): 66/76/86 pontos com 15/20/25 anos de exposição.",
+      "Professor: pontos 81/91 (até 92/100); idade 51/56 (até 57/60); pedágio de 100% com 52/55 anos.",
+    ],
+    exemplos: [
+      {
+        titulo: "Regra dos pontos em 2026",
+        texto:
+          "Em 2026 a mulher precisa de 93 pontos e 30 anos de contribuição. Cláudia tem 58 anos de idade e 35 anos de contribuição: 58 + 35 = 93 pontos — cumpre. Valor: 60% + (35 − 15) × 2% = 100% da média.",
+      },
+      {
+        titulo: "Pedágio de 50%",
+        texto:
+          "Em 13/11/2019, Roberto tinha 34 anos de contribuição (mais de 33, então pode usar a regra). Faltava 1 ano para os 35. Pedágio: 50% de 1 ano = 6 meses. Ele precisa de 35 anos e 6 meses de contribuição, sem idade mínima. O valor será a média multiplicada pelo fator previdenciário.",
+      },
+      {
+        titulo: "Pedágio de 100%",
+        texto:
+          "Em 13/11/2019, Sônia tinha 27 anos de contribuição. Faltavam 3 anos para os 30. Pedágio: 100% de 3 anos = 3 anos. Ela precisa de 30 + 3 = 33 anos de contribuição e 57 anos de idade. O valor será 100% da média.",
+      },
+    ],
+    esquemas: [
+      {
+        tipo: "tabela",
+        titulo: "Evolução anual — pontos (art. 15) e idade progressiva (art. 16)",
+        colunas: ["Ano", "Pontos M / H", "Idade mínima M / H"],
+        linhas: [
+          ["2019", "86 / 96", "56 / 61"],
+          ["2020", "87 / 97", "56,5 / 61,5"],
+          ["2021", "88 / 98", "57 / 62"],
+          ["2022", "89 / 99", "57,5 / 62,5"],
+          ["2023", "90 / 100", "58 / 63"],
+          ["2024", "91 / 101", "58,5 / 63,5"],
+          ["2025", "92 / 102", "59 / 64"],
+          ["2026", "93 / 103", "59,5 / 64,5"],
+          ["2027", "94 / 104", "60 / 65 (H no limite)"],
+          ["2028", "95 / 105 (H no limite)", "60,5 / 65"],
+          ["2031", "98 / 105", "62 / 65 (M no limite)"],
+          ["2033", "100 / 105 (M no limite)", "62 / 65"],
+        ],
+      },
+      {
+        tipo: "tabela",
+        titulo: "Resumo das transições do RGPS (filiados até 13/11/2019)",
+        colunas: ["Regra", "Requisitos", "Valor"],
+        linhas: [
+          ["Pontos (art. 15)", "30/35 anos de contribuição + pontos progressivos", "60% + 2 p.p."],
+          ["Idade progressiva (art. 16)", "30/35 anos de contribuição + idade progressiva", "60% + 2 p.p."],
+          ["Pedágio 50% (art. 17)", "Mais de 28/33 anos em 13/11/2019; 30/35 + 50% do que faltava", "Média × fator previdenciário"],
+          ["Idade (art. 18)", "62 (M, desde 2023) / 65 (H) + 15 anos de contribuição", "60% + 2 p.p."],
+          ["Pedágio 100% (art. 20)", "57/60 anos + 30/35 + 100% do que faltava", "100% da média"],
+          ["Especial (art. 21)", "66/76/86 pontos + 15/20/25 anos de exposição", "60% + 2 p.p."],
+        ],
+      },
+    ],
+    pegadinhas: [
+      "Dizer que o pedágio de 50% exige idade mínima — não exige; quem exige idade (57/60) é o pedágio de 100%.",
+      "Trocar os valores dos pedágios: 50% → fator previdenciário; 100% → 100% da média.",
+      "Afirmar que qualquer segurado pode usar o pedágio de 50% — só quem tinha mais de 28 (M) / 33 (H) anos de contribuição em 13/11/2019.",
+      "Dizer que a pontuação sobe 1 ponto por ano até 105 para ambos os sexos — o limite é 100 (M) e 105 (H).",
+      "Aplicar as regras de transição a quem se filiou depois de 13/11/2019 — para esses vale apenas a regra permanente.",
+    ],
+    fundamentos: [
+      "EC nº 103/2019, arts. 3º, 15, 16, 17, 18, 20, 21 e 26",
+      "Lei nº 8.213/1991, art. 29, §§ 7º a 9º (fator previdenciário)",
+    ],
+  },
+  {
+    id: "ben-incapacidade-acidente",
+    titulo: "Benefícios por incapacidade e auxílio-acidente",
+    pool: "beneficios",
+    topicos: ["tec-esp-12", "tec-esp-22", "ana-prev-9"],
+    texto: [
+      "O auxílio por incapacidade temporária (antigo auxílio-doença) é devido ao segurado que fica incapaz para o seu trabalho ou atividade habitual por mais de 15 dias consecutivos. Exige, em regra, 12 contribuições de carência, dispensadas em acidente de qualquer natureza, doença profissional ou do trabalho e doenças graves da lista oficial. Não é devido se a pessoa já entrou no RGPS com a doença, salvo se a incapacidade vier do agravamento ou progressão dela.",
+      "Para o empregado, a empresa paga o salário integral dos 15 primeiros dias de afastamento, e o INSS paga a partir do 16º dia. Para os demais segurados (inclusive o doméstico), o benefício começa na data do início da incapacidade. Se o pedido for feito com mais de 30 dias de afastamento, o benefício começa na data do requerimento. O valor é de 91% do salário de benefício, sem ultrapassar a média dos 12 últimos salários de contribuição.",
+      "Sempre que possível, a concessão fixa uma data estimada de cessação; se não fixar, o benefício termina após 120 dias, salvo pedido de prorrogação. Quem não tem como voltar à atividade habitual deve passar por reabilitação profissional e continua recebendo até ser reabilitado ou aposentado. O segurado preso em regime fechado não recebe o auxílio; em regime aberto ou semiaberto, recebe.",
+      "A aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez) é para quem está incapaz de forma total e definitiva, sem possibilidade de reabilitação para outra atividade. O valor é de 60% da média + 2 p.p. por ano acima de 20 (H) ou 15 (M), mas sobe para 100% quando decorre de acidente do trabalho, doença profissional ou do trabalho. Se o aposentado precisar da assistência permanente de outra pessoa, recebe adicional de 25%, mesmo que ultrapasse o teto; esse adicional não passa para a pensão. Se voltar a trabalhar voluntariamente, a aposentadoria é cancelada a partir do retorno.",
+      "O auxílio-acidente é uma indenização (não substitui renda): é pago quando, após a consolidação das lesões de um acidente de qualquer natureza, ficam sequelas que reduzem a capacidade para o trabalho habitual. Vale 50% do salário de benefício, começa no dia seguinte à cessação do auxílio por incapacidade temporária, não exige carência, pode ser inferior ao salário mínimo e pode ser recebido junto com salário. Termina na véspera de qualquer aposentadoria ou com o óbito. Só têm direito o empregado, o doméstico, o avulso e o segurado especial.",
+      "Quem recebe benefício por incapacidade pode ser convocado para perícia a qualquer momento e é obrigado a fazer exame médico, reabilitação e tratamento gratuito (cirurgia e transfusão de sangue são facultativas). O aposentado por incapacidade permanente fica isento da reavaliação após os 60 anos, ou após os 55 anos se já tiver 15 anos de benefício, salvo exceções (como verificar a necessidade do adicional de 25%).",
+    ],
+    pontosChave: [
+      "Auxílio por incapacidade temporária: incapacidade por mais de 15 dias consecutivos; carência de 12 (com exceções).",
+      "Empregado: empresa paga os 15 primeiros dias; INSS a partir do 16º dia. Pedido após 30 dias de afastamento: desde o requerimento.",
+      "Valor do auxílio temporário: 91% do SB, limitado à média dos 12 últimos salários de contribuição.",
+      "Sem data de cessação fixada: cessa em 120 dias, salvo pedido de prorrogação.",
+      "Incapacidade permanente: 60% + 2 p.p.; 100% se acidente do trabalho/doença ocupacional.",
+      "Adicional de 25% (art. 45): pode ultrapassar o teto; cessa com a morte; não se incorpora à pensão.",
+      "Auxílio-acidente: 50% do SB, indenizatório, sem carência, pode ser < 1 SM; cessa com aposentadoria.",
+      "Auxílio-acidente: empregado, doméstico, avulso e segurado especial (não CI nem facultativo).",
+      "Isenção de reavaliação do aposentado por incapacidade: 60 anos, ou 55 anos + 15 anos de benefício (art. 101, § 1º).",
+      "Recluso em regime fechado não recebe auxílio por incapacidade temporária; semiaberto/aberto recebe.",
+    ],
+    exemplos: [
+      {
+        titulo: "Auxílio temporário com limitador",
+        texto:
+          "Média geral hipotética (SB) de R$ 3.000,00. 91% de 3.000 = R$ 2.730,00. Mas a média dos 12 últimos salários de contribuição do segurado é R$ 2.500,00. Como o benefício não pode passar dessa média, ele recebe R$ 2.500,00.",
+      },
+      {
+        titulo: "Incapacidade permanente comum x acidentária",
+        texto:
+          "Homem com 28 anos de contribuição e média hipotética de R$ 3.000,00. Doença comum: 60% + (28 − 20) × 2% = 76% → R$ 2.280,00. Se a incapacidade decorrer de acidente do trabalho: 100% → R$ 3.000,00. Precisando de cuidador permanente: + 25% → R$ 3.750,00 (pode passar do teto).",
+      },
+      {
+        titulo: "Auxílio-acidente",
+        texto:
+          "Um pedreiro empregado perde parte dos movimentos da mão após acidente doméstico (fora do trabalho). Recebeu auxílio por incapacidade temporária e, consolidadas as lesões, voltou ao trabalho com redução da capacidade. A partir do dia seguinte à cessação do auxílio temporário, recebe auxílio-acidente de 50% do SB, junto com o salário. Ao se aposentar, o auxílio-acidente cessa.",
+      },
+    ],
+    esquemas: [
+      {
+        tipo: "tabela",
+        titulo: "Comparando os três benefícios",
+        colunas: ["", "Incapacidade temporária", "Incapacidade permanente", "Auxílio-acidente"],
+        linhas: [
+          ["Natureza", "Substitui a renda", "Substitui a renda", "Indenização"],
+          ["Carência", "12 (com exceções)", "12 (com exceções)", "Não exige"],
+          ["Valor", "91% do SB (limite: média dos 12 últimos SC)", "60% + 2 p.p. ou 100% (acidentária)", "50% do SB"],
+          ["Pode ser < 1 SM?", "Não", "Não", "Sim"],
+          ["Acumula com salário?", "Não", "Não (retorno voluntário cancela)", "Sim"],
+        ],
+      },
+    ],
+    pegadinhas: [
+      "Dizer que a empresa paga os 30 primeiros dias — são 15; o INSS paga a partir do 16º dia.",
+      "Afirmar que o auxílio-acidente exige carência ou não pode ser inferior ao salário mínimo — não exige e pode.",
+      "Dizer que o auxílio-acidente acumula com aposentadoria — cessa na véspera de qualquer aposentadoria.",
+      "Afirmar que o adicional de 25% respeita o teto ou passa para a pensão — não respeita e não passa.",
+      "Dizer que o auxílio-acidente só cabe em acidente do trabalho — cabe em acidente de qualquer natureza.",
+    ],
+    fundamentos: [
+      "Lei nº 8.213/1991, arts. 42 a 47, 59 a 63, 86 e 101",
+      "EC nº 103/2019, art. 26, §§ 2º, III, e 3º, II",
+    ],
+  },
 ]

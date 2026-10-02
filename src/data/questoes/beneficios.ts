@@ -375,7 +375,7 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "A EC nº 103/2019 vedou a conversão de tempo especial em tempo comum em relação ao trabalho exercido após a data de sua entrada em vigor.",
     gabarito: "C",
     comentario:
-      "Art. 25, § 2º, da EC nº 103/2019: a conversão continua possível apenas para o tempo especial cumprido até 13/11/2019 (vedada também pelo art. 201, § 14, da CF a contagem de tempo fictício). Atenção à jurisprudência: no julgamento da ADI 6309 (junho/2026), o STF manteve essa vedação e o novo cálculo (60% + 2 p.p.), mas declarou inconstitucional a idade mínima de 55/58/60 anos que o art. 19, § 1º, I, havia criado para a aposentadoria especial.",
+      "Art. 25, § 2º, da EC nº 103/2019: a conversão continua possível apenas para o tempo especial cumprido até 13/11/2019, data de entrada em vigor da emenda. Atenção à jurisprudência: no julgamento da ADI 6309 (junho/2026), o STF manteve essa vedação e o novo cálculo (60% + 2 p.p.), mas declarou inconstitucional a idade mínima de 55/58/60 anos que o art. 19, § 1º, I, havia criado para a aposentadoria especial.",
     fundamento: "EC nº 103/2019, art. 25, § 2º; STF, ADI 6309",
   },
   {
@@ -487,10 +487,10 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
     pool: "beneficios",
     assunto: "União estável — prova",
     enunciado:
-      "A comprovação de união estável para fins de pensão por morte pode ser feita exclusivamente por prova testemunhal.",
+      "Em regra, a comprovação de união estável para fins de pensão por morte pode ser feita exclusivamente por prova testemunhal, dispensado o início de prova material.",
     gabarito: "E",
     comentario:
-      "Exige-se início de prova material contemporânea dos fatos, produzido em período não superior a 24 meses anterior ao óbito; não se admite prova exclusivamente testemunhal, salvo força maior ou caso fortuito.",
+      "Desde a Lei nº 13.846/2019, exige-se início de prova material contemporânea dos fatos, produzido em período não superior a 24 meses anterior ao óbito (ou à prisão, no auxílio-reclusão); a prova exclusivamente testemunhal só é admitida, excepcionalmente, em caso de força maior ou caso fortuito.",
     fundamento: "Lei nº 8.213/1991, art. 16, § 5º",
   },
   {
@@ -501,8 +501,8 @@ export const QUESTOES_BENEFICIOS: Questao[] = [
       "O aposentado pelo RGPS que permanecer em atividade sujeita a esse regime é segurado obrigatório em relação a essa atividade.",
     gabarito: "C",
     comentario:
-      "Art. 11, § 3º, da Lei nº 8.213/1991. Ele contribui, mas só faz jus a salário-família e reabilitação profissional, quando empregado (art. 18, § 2º).",
-    fundamento: "Lei nº 8.213/1991, arts. 11, § 3º, e 18, § 2º",
+      "Art. 11, § 3º, da Lei nº 8.213/1991. Ele contribui, mas, pela lei, só faz jus a salário-família e reabilitação profissional, quando empregado (art. 18, § 2º); o Decreto nº 3.048/1999 (art. 103) assegura também o salário-maternidade à aposentada que retorna à atividade. O STF rejeitou a desaposentação (Tema 503).",
+    fundamento: "Lei nº 8.213/1991, arts. 11, § 3º, e 18, § 2º; Decreto nº 3.048/1999, art. 103",
   },
   {
     id: "ben-048",

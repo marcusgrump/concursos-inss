@@ -117,7 +117,7 @@ export const QUESTOES_ADMINISTRATIVO: Questao[] = [
     gabarito: "C",
     comentario:
       "Excesso de poder e desvio de finalidade (ou de poder) são as duas espécies de abuso de poder. No excesso, o vício está na competência; no desvio, na finalidade.",
-    fundamento: "Lei nº 4.717/1965, art. 2º, parágrafo único, e",
+    fundamento: "Lei nº 4.717/1965, art. 2º, parágrafo único, a e e",
   },
   {
     id: "da-012",
@@ -321,8 +321,8 @@ export const QUESTOES_ADMINISTRATIVO: Questao[] = [
       "A ação disciplinar prescreve em cinco anos quanto às infrações puníveis com demissão, cassação de aposentadoria ou disponibilidade e destituição de cargo em comissão; em dois anos, quanto à suspensão; e em cento e oitenta dias, quanto à advertência, contando-se o prazo da data em que o fato se tornou conhecido.",
     gabarito: "C",
     comentario:
-      "São os prazos do art. 142, que começam a correr da data em que o fato se tornou conhecido (e não da data em que foi praticado). A abertura de sindicância ou a instauração de PAD interrompe a prescrição até a decisão final.",
-    fundamento: "Lei nº 8.112/1990, art. 142",
+      "São os prazos do art. 142, que começam a correr da data em que o fato se tornou conhecido pela autoridade competente para instaurar o procedimento (e não da data em que foi praticado). A abertura de sindicância punitiva ou a instauração de PAD interrompe a prescrição; segundo a Súmula 635 do STJ, o prazo volta a correr por inteiro após 140 dias da interrupção (prazo máximo legal para concluir o PAD).",
+    fundamento: "Lei nº 8.112/1990, art. 142; Súmula 635 do STJ",
   },
   {
     id: "da-031",
@@ -442,8 +442,8 @@ export const QUESTOES_ADMINISTRATIVO: Questao[] = [
       "Após as alterações promovidas pela Lei nº 14.230/2021, somente condutas dolosas configuram ato de improbidade administrativa, inclusive nos casos de lesão ao erário, não mais subsistindo a modalidade culposa.",
     gabarito: "C",
     comentario:
-      "Dolo é a vontade livre e consciente de alcançar o resultado ilícito, não bastando a voluntariedade do agente. No Tema 1.199, o STF decidiu que a revogação da modalidade culposa não retroage para atingir condenações transitadas em julgado.",
-    fundamento: "Lei nº 8.429/1992, arts. 1º, §§ 1º e 2º, e 10; STF, Tema 1.199",
+      "Dolo é a vontade livre e consciente de alcançar o resultado ilícito tipificado nos arts. 9º, 10 e 11, não bastando a voluntariedade do agente. No Tema 1.199, o STF decidiu que a revogação da modalidade culposa não retroage para atingir condenações transitadas em julgado, mas alcança os atos culposos praticados antes da lei cujos processos ainda não tinham trânsito em julgado, cabendo ao juiz verificar se houve dolo. A exigência de dolo foi confirmada pelo STF no julgamento das ADIs 7156 e 7236 (2026).",
+    fundamento: "Lei nº 8.429/1992, arts. 1º, §§ 1º e 2º, e 10; STF, Tema 1.199 (ARE 843.989)",
   },
   {
     id: "da-042",
@@ -453,7 +453,7 @@ export const QUESTOES_ADMINISTRATIVO: Questao[] = [
       "Com a Lei nº 14.230/2021, o rol de condutas do art. 11 da Lei nº 8.429/1992, referente aos atos de improbidade que atentam contra os princípios da administração pública, passou a ser exemplificativo, de modo que qualquer violação a princípio pode configurar improbidade.",
     gabarito: "E",
     comentario:
-      "O rol do art. 11 passou a ser taxativo: a conduta dolosa que viole os deveres de honestidade, imparcialidade e legalidade deve estar 'caracterizada por uma das seguintes condutas' listadas nos incisos.",
+      "O rol do art. 11 passou a ser taxativo: a conduta dolosa que viole os deveres de honestidade, imparcialidade e legalidade deve estar 'caracterizada por uma das seguintes condutas' listadas nos incisos. O STF manteve a taxatividade ao julgar as ADIs 7156 e 7236 (2026).",
     fundamento: "Lei nº 8.429/1992, art. 11",
   },
   {
@@ -464,7 +464,7 @@ export const QUESTOES_ADMINISTRATIVO: Questao[] = [
       "A ação para a aplicação das sanções previstas na Lei de Improbidade Administrativa prescreve em oito anos, contados a partir da ocorrência do fato ou, no caso de infrações permanentes, do dia em que cessou a permanência.",
     gabarito: "C",
     comentario:
-      "É o prazo do art. 23, com a redação da Lei nº 14.230/2021. Continua imprescritível, porém, a ação de ressarcimento ao erário fundada em ato doloso de improbidade (STF, Tema 897).",
-    fundamento: "Lei nº 8.429/1992, art. 23",
+      "É o prazo do art. 23, com a redação da Lei nº 14.230/2021, que o STF considerou válido. Nas ADIs 7156 e 7236 (julho de 2026), porém, o STF invalidou a regra que fazia o prazo recomeçar pela metade (quatro anos) após a interrupção — ele recomeça por inteiro — e fixou o limite máximo de 20 anos. Continua imprescritível a ação de ressarcimento ao erário fundada em ato doloso de improbidade (STF, Tema 897).",
+    fundamento: "Lei nº 8.429/1992, art. 23; STF, ADIs 7156 e 7236; STF, Tema 897",
   },
 ]
