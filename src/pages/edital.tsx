@@ -2,6 +2,7 @@ import {
   BookOpenCheckIcon,
   CheckCheckIcon,
   DownloadIcon,
+  GraduationCapIcon,
   ExpandIcon,
   InfoIcon,
   PrinterIcon,
@@ -21,6 +22,7 @@ import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { aulasDoTopico } from "@/data/aulas"
 import { documentoDoArquivo } from "@/data/documentos"
 import { CARGOS, LISTA_CARGOS, SITUACAO } from "@/data/edital"
 import { questoesDaDisciplina } from "@/data/questoes"
@@ -210,8 +212,8 @@ function ItemDisciplina({
       <AccordionContent className="space-y-4">
         <ul className="space-y-1">
           {disciplina.topicos.map((t, i) => (
-            <li key={t.id}>
-              <label className="flex cursor-pointer items-start gap-3 rounded-md px-2 py-1.5 hover:bg-muted/60">
+            <li key={t.id} className="flex items-start gap-1 rounded-md hover:bg-muted/60">
+              <label className="flex flex-1 cursor-pointer items-start gap-3 px-2 py-1.5">
                 <Checkbox
                   className="mt-0.5"
                   checked={!!topicos[t.id]}
@@ -222,6 +224,14 @@ function ItemDisciplina({
                   {t.texto}
                 </span>
               </label>
+              {aulasDoTopico(t.id)[0] && (
+                <Button variant="ghost" size="xs" className="mt-1 shrink-0 text-primary" asChild>
+                  <Link to={`/aulas/${aulasDoTopico(t.id)[0].id}`} aria-label={`Estudar a aula: ${t.texto}`}>
+                    <GraduationCapIcon />
+                    Aula
+                  </Link>
+                </Button>
+              )}
             </li>
           ))}
         </ul>

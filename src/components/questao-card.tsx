@@ -1,4 +1,5 @@
-import { CheckIcon, CircleSlashIcon, ScaleIcon, XIcon } from "lucide-react"
+import { CheckIcon, CircleSlashIcon, GraduationCapIcon, ScaleIcon, XIcon } from "lucide-react"
+import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -87,6 +88,13 @@ export function QuestaoCard({ questao, numero, resposta, revelada, onResponder, 
                 {questao.fundamento}
               </p>
             )}
+            <Link
+              to={`/aulas?busca=${encodeURIComponent(questao.assunto.split(/[—–:-]/)[0].trim())}`}
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:underline"
+            >
+              <GraduationCapIcon className="size-3.5" />
+              Estudar este assunto nas aulas
+            </Link>
           </div>
         )}
       </CardContent>

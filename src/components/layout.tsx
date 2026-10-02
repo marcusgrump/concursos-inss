@@ -2,6 +2,7 @@ import {
   BookOpenCheckIcon,
   ClipboardListIcon,
   FileTextIcon,
+  GraduationCapIcon,
   GaugeIcon,
   LayersIcon,
   LibraryIcon,
@@ -26,6 +27,7 @@ import { cn } from "@/lib/utils"
 const NAV = [
   { to: "/", rotulo: "Painel", icone: GaugeIcon, fim: true },
   { to: "/edital", rotulo: "Edital", icone: FileTextIcon },
+  { to: "/aulas", rotulo: "Aulas", icone: GraduationCapIcon },
   { to: "/questoes", rotulo: "Questões", icone: BookOpenCheckIcon },
   { to: "/simulado", rotulo: "Simulado", icone: TimerIcon },
   { to: "/flashcards", rotulo: "Flashcards", icone: LayersIcon },

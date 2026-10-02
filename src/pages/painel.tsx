@@ -3,6 +3,7 @@ import {
   BookOpenCheckIcon,
   CalendarClockIcon,
   FileTextIcon,
+  GraduationCapIcon,
   LayersIcon,
   LibraryIcon,
   NotebookPenIcon,
@@ -30,7 +31,7 @@ const RECOMENDACOES = [
   },
   {
     titulo: "Estude em ciclos curtos",
-    texto: "Tópico do edital → 15–20 questões → releia os comentários dos erros. Marque o tópico no Edital só depois de praticar.",
+    texto: "Aula do tópico → 15–20 questões → releia os comentários dos erros. Conclua a aula (marca o tópico no Edital) depois de praticar.",
   },
   {
     titulo: "Revise com espaçamento",
@@ -121,6 +122,7 @@ export function PainelPage() {
       </div>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <Atalho para="/aulas" icone={GraduationCapIcon} titulo="Aulas" texto="Teoria, exemplos e esquemas de cada tópico" />
         <Atalho
           para={sugestao ? `/questoes?d=${sugestao.disciplina.id}` : "/questoes"}
           icone={BookOpenCheckIcon}
