@@ -14,6 +14,7 @@ const SimuladoPage = lazyPagina(() => import("@/pages/simulado").then((m) => m.S
 const FlashcardsPage = lazyPagina(() => import("@/pages/flashcards").then((m) => m.FlashcardsPage))
 const RevisaoPage = lazyPagina(() => import("@/pages/revisao").then((m) => m.RevisaoPage))
 const MateriaisPage = lazyPagina(() => import("@/pages/materiais").then((m) => m.MateriaisPage))
+const LeitorPage = lazyPagina(() => import("@/pages/leitor").then((m) => m.LeitorPage))
 const ProgressoPage = lazyPagina(() => import("@/pages/progresso").then((m) => m.ProgressoPage))
 
 function RolarAoTopo() {
@@ -38,6 +39,7 @@ export default function App() {
               <Route path="flashcards" element={<FlashcardsPage />} />
               <Route path="revisao" element={<RevisaoPage />} />
               <Route path="materiais" element={<MateriaisPage />} />
+              <Route path="leitor/:id" element={<LeitorPage />} />
               <Route path="progresso" element={<ProgressoPage />} />
               <Route path="*" element={<PainelPage />} />
             </Route>

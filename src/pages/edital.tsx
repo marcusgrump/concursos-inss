@@ -2,7 +2,7 @@ import {
   BookOpenCheckIcon,
   CheckCheckIcon,
   DownloadIcon,
-  ExternalLinkIcon,
+  ExpandIcon,
   InfoIcon,
   PrinterIcon,
   SearchIcon,
@@ -10,6 +10,7 @@ import {
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
+import { PdfViewer } from "@/components/pdf-viewer"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
@@ -20,6 +21,7 @@ import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { documentoDoArquivo } from "@/data/documentos"
 import { CARGOS, LISTA_CARGOS, SITUACAO } from "@/data/edital"
 import { questoesDaDisciplina } from "@/data/questoes"
 import type { Cargo, CargoId, Disciplina } from "@/data/types"
@@ -304,10 +306,10 @@ function VisualizadorPdf({ cargoAtual }: { cargoAtual: CargoId }) {
         </ToggleGroup>
         <div className="flex flex-wrap gap-2">
           <Button variant="outline" size="sm" asChild>
-            <a href={url} target="_blank" rel="noreferrer">
-              <ExternalLinkIcon />
-              Abrir em nova aba
-            </a>
+            <Link to={`/leitor/${documentoDoArquivo(pdf.arquivo)?.id ?? ""}`}>
+              <ExpandIcon />
+              Abrir em tela inteira
+            </Link>
           </Button>
           <Button variant="outline" size="sm" asChild>
             <a href={url} download>
@@ -325,19 +327,7 @@ function VisualizadorPdf({ cargoAtual }: { cargoAtual: CargoId }) {
 
       <p className="text-sm text-muted-foreground">{pdf.titulo}</p>
 
-      <div className="overflow-hidden rounded-xl border bg-muted/30">
-        <object data={url} type="application/pdf" className="h-[75svh] w-full" aria-label={pdf.titulo}>
-          <div className="space-y-3 p-8 text-center text-sm">
-            <p>Seu navegador não exibe PDFs embutidos (comum no celular).</p>
-            <Button asChild>
-              <a href={url} target="_blank" rel="noreferrer">
-                <ExternalLinkIcon />
-                Abrir o PDF
-              </a>
-            </Button>
-          </div>
-        </object>
-      </div>
+      <PdfViewer key={url} url={url} titulo={pdf.titulo} />
     </div>
   )
 }
