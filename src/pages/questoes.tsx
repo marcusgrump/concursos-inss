@@ -131,7 +131,7 @@ export function QuestoesPage() {
             <SelectTrigger className="w-full" aria-label="Disciplina">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent onCloseAutoFocus={(e) => e.preventDefault()}>
               <SelectItem value="todas">Todas as disciplinas ({questoesDoCargo(cargoId).length})</SelectItem>
               {cargo.disciplinas.map((d) => (
                 <SelectItem key={d.id} value={d.id}>
@@ -144,7 +144,7 @@ export function QuestoesPage() {
             <SelectTrigger className="w-full sm:w-52" aria-label="Filtro">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent onCloseAutoFocus={(e) => e.preventDefault()}>
               {(Object.keys(NOMES_FILTRO) as Filtro[]).map((f) => (
                 <SelectItem key={f} value={f}>
                   {NOMES_FILTRO[f]}

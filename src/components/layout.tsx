@@ -12,8 +12,9 @@ import {
   TimerIcon,
 } from "lucide-react"
 import { useTheme } from "next-themes"
-import { Suspense, useState } from "react"
-import { NavLink, Outlet } from "react-router-dom"
+import { Suspense, useEffect, useRef, useState } from "react"
+import { NavLink, Outlet, useLocation } from "react-router-dom"
+import { ErrorBoundary } from "@/components/error-boundary"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
@@ -56,7 +57,7 @@ function SeletorCargo() {
         <SelectTrigger className="w-full" aria-label="Selecionar cargo">
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent onCloseAutoFocus={(e) => e.preventDefault()}>
           {LISTA_CARGOS.map((c) => (
             <SelectItem key={c.id} value={c.id}>
               {c.nome}
@@ -125,6 +126,14 @@ function ConteudoLateral({ aoNavegar }: { aoNavegar?: () => void }) {
 
 export function Layout() {
   const [menuAberto, setMenuAberto] = useState(false)
+  const { pathname } = useLocation()
+  const conteudo = useRef<HTMLDivElement>(null)
+
+  // Ao trocar de página, o foco vai para o conteúdo. Sem isso ele pode ficar num
+  // seletor do menu, e os atalhos de teclado (C, E, Enter) abririam esse seletor.
+  useEffect(() => {
+    conteudo.current?.focus({ preventScroll: true })
+  }, [pathname])
 
   return (
     <div className="min-h-svh bg-background">
@@ -154,10 +163,12 @@ export function Layout() {
       </header>
 
       <main className="md:pl-64">
-        <div className="mx-auto max-w-5xl px-4 py-6 md:px-8 md:py-10">
-          <Suspense fallback={<p className="py-10 text-center text-sm text-muted-foreground">Carregando…</p>}>
-            <Outlet />
-          </Suspense>
+        <div ref={conteudo} tabIndex={-1} className="mx-auto max-w-5xl px-4 py-6 outline-none md:px-8 md:py-10">
+          <ErrorBoundary key={pathname}>
+            <Suspense fallback={<p className="py-10 text-center text-sm text-muted-foreground">Carregando…</p>}>
+              <Outlet />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </main>
     </div>

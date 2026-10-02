@@ -375,7 +375,7 @@ export function FlashcardsPage() {
             <SelectTrigger id="filtro-disciplina" className="w-full sm:w-80">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent onCloseAutoFocus={(e) => e.preventDefault()}>
               <SelectItem value={TODAS}>Todas as disciplinas</SelectItem>
               {disciplinas.map(({ disciplina, total: n }) => (
                 <SelectItem key={disciplina.id} value={disciplina.id}>
