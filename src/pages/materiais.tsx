@@ -1,5 +1,6 @@
 import { ExternalLinkIcon, FileTextIcon, InfoIcon, ScaleIcon, SearchIcon, TriangleAlertIcon } from "lucide-react"
 import { useMemo, useState } from "react"
+import { Link } from "react-router-dom"
 import { PageHeader } from "@/components/page-header"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
@@ -9,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { documentoDoArquivo } from "@/data/documentos"
 import { CARGOS } from "@/data/edital"
 import {
   NORMAS,
@@ -46,10 +48,6 @@ const PRIORIDADES: { id: Prioridade; titulo: string; descricao: string; variante
     variante: "outline",
   },
 ]
-
-function urlPublica(caminho: string) {
-  return `${import.meta.env.BASE_URL}${caminho}`
-}
 
 function normalizar(texto: string) {
   return texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase()
@@ -375,13 +373,13 @@ function LinhaArquivo({ arquivo, tipo, titulo }: { arquivo: ArquivoProva; tipo: 
         variant={tipo === "prova" ? "default" : "outline"}
         className="w-full shrink-0 sm:w-auto"
       >
-        <a href={urlPublica(arquivo.caminho)} target="_blank" rel="noreferrer">
+        <Link to={`/leitor/${documentoDoArquivo(arquivo.caminho)?.id ?? ""}`}>
           <FileTextIcon />
           {tipo === "prova" ? "Abrir prova" : "Gabarito"}
           <span className="sr-only">
-            : {titulo}, {arquivo.rotulo} (PDF, abre em nova aba)
+            : {titulo}, {arquivo.rotulo}
           </span>
-        </a>
+        </Link>
       </Button>
     </li>
   )
